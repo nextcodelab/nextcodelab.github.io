@@ -2546,6 +2546,7 @@ body.is-loading #banner > .slider {
   #footer .contact-icons li:first-child {
     margin-top: 0;
   }
+ 
 }
 @media screen and (max-width: 480px) {
   #footer {

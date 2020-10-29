@@ -9,13 +9,13 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <!-- Site Metas -->
-<title>www.cloudlabstudio.com</title>
+<title>Loading site...</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 
 <!-- Site Icons -->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" id="tag_logo2" href="images/favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
 <!-- Bootstrap CSS -->
@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="css/responsive.css">
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -66,7 +66,7 @@
     <header class="header header_style_01">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="images/logos/logo-app.png" alt="image"></a>
+                <a class="navbar-brand" href="index.html"><img style="height: 48px;" id="tag_logo3"  alt="image"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarApp"
                     aria-controls="navbarApp" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
@@ -78,7 +78,7 @@
                         <li><a class="nav-link active" href="#home">Home</a></li>
                         <li><a class="nav-link" href="#wrapper">Apps</a></li>
                         <li><a class="nav-link" href="#featuredappdiv">Features</a></li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -90,7 +90,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <div class="big-tagline">
-                        <h2>CloudLab Studio Apps</h2>
+                        <h2 id="dev_tag2">DeveloperName Apps</h2>
                         <p class="lead">With over 1 million+ worldwide downloads. </p>
                         <a data-scroll target="_blank"
                             href="https://play.google.com/store/apps/developer?id=CloudLab+Studio&hl=en"
@@ -256,7 +256,7 @@
             <section class="main">
                 <header class="major">
                     <!-- Wrapper -->
-                    <h2 class="featuredheader" >Featured Products</h2>
+                    <h2 class="featuredheader">Featured Products</h2>
                 </header>
                 <div class="features">
                     <section>
@@ -484,17 +484,18 @@
                         <img src="uploads/iphones.png" alt="" class="img-fluid wow fadeInUp">
                     </div>
                 </div>
+                
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <footer class="footer" >
+    <footer class="footer">
         <div class="container" id="aboutdiv">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
-                            <img src="images/logos/logo-app.png" alt="">
+                            <img id="tag_logo" style="height: 48px;" alt="">
                             <small>Our Apps</small> </div>
                         <p>More Apps coming</p>
                         <p>Enjoy the browsing
@@ -509,32 +510,17 @@
                         </div>
 
                         <ul class="footer-links">
-                            <li><a href="mailto:#">amazingview4@gmail.com</a></li>
-                            <li><a href="#">www.cloudlabstudio.com</a></li>
+                            <li><a id="tag_contact_email" href="mailto:#">ContactEmail</a></li>
+                            <li><a id="site_tag" href="#">SiteName</a></li>
                             <li>Richmond Vill 1744</li>
                             <!-- <li>+61 3 8376 6000</li> -->
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
-
-                <!-- <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="footer-distributed widget clearfix">
-                        <div class="widget-title">
-                            <h3>Newsletter</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form</p>
-                        </div>
-                        <div class="footer-right">
-                            <form method="get" action="#">
-                                <input placeholder="Subscribe our newsletter.." name="search">
-                                <i class="fa fa-envelope-o"></i>
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
-
                 <!-- <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+                   
                     <div class="widget clearfix">
+                       
                         <div class="widget-title">
                             <h3>Social</h3>
                         </div>
@@ -547,6 +533,7 @@
                         </ul>
                     </div>
                 </div> -->
+               
             </div><!-- end row -->
         </div><!-- end container -->
     </footer><!-- end footer -->
@@ -555,9 +542,9 @@
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-left">
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2011-2020 <a href="#">CloudLab Studio</a>
+                    <p id="date_Tag" class="footer-company-name">All Rights Reserved. &copy; 2011-2020 <a id="dev_tag" href="#">DeveloperName</a>
                         Design By :
-                        <a href="https://html.design/">CloudLab Studio Team</a></p>
+                        <a id="dev_tag1" href="https://html.design/">DeveloperName Team</a></p>
                 </div>
             </div>
         </div><!-- end container -->
@@ -576,6 +563,57 @@
             slideSpeed: 450,
             autoplaySpeed: 2000
         });
+        window.onload = function () {
+            var downloadTxtUrl = 'https://raw.githubusercontent.com/nextcodelab/hosthson/main/developerInfo.json';
+            var responseResult;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', downloadTxtUrl, 'jsonp');
+            xhr.responseType = 'json';
+            xhr.onload = function (e) {
+                if (this.status == 200) {
+                    console.log('response', this.response); // JSON response 
+                    responseResult = this.response;
+                    var AppName = responseResult.Application;
+                    var Developer = responseResult.Developer;
+                    var ContactMail = responseResult.Email;
+                    var theDate = responseResult.Date;
+                    var site = responseResult.Site;
+                    var logo = responseResult.Logo;
+                    var favIcon = responseResult.FavIcon;
+                    //Contact
+                    var contactTag = document.getElementById("tag_contact_email");
+                    contactTag.innerHTML = contactTag.innerHTML.replace(/ContactEmail/g, ContactMail);
+                    //Developer
+                    var dev_Tag = document.getElementById("dev_tag");
+                    dev_Tag.innerHTML = dev_Tag.innerHTML.replace(/DeveloperName/g, Developer);
+
+                    var dev_Tag1 = document.getElementById("dev_tag1");
+                    dev_Tag1.innerHTML = dev_Tag1.innerHTML.replace(/DeveloperName/g, Developer);
+                    dev_Tag1.href = site;
+
+                    var dev_Tag2 = document.getElementById("dev_tag2");
+                    dev_Tag2.innerHTML = dev_Tag2.innerHTML.replace(/DeveloperName/g, Developer);
+                    document.title = Developer;
+                     //Contact
+                     var site_tag = document.getElementById("site_tag");
+                     site_tag.innerHTML = site_tag.innerHTML.replace(/SiteName/g, site);
+
+                     //Logo
+                     var tag_logo = document.getElementById("tag_logo");
+                     tag_logo.src = logo;
+
+                      //Logo
+                      var tag_logo3 = document.getElementById("tag_logo3");
+                     tag_logo3.src = logo;
+
+                     var tag_logo2 = document.getElementById("tag_logo2");
+                     tag_logo2.href = favIcon;
+
+                     
+                }
+            };
+            xhr.send();
+        }
     </script>
 
 </body>
