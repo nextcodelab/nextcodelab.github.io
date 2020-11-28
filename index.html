@@ -14,7 +14,7 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-
+<link rel="stylesheet" type="text/css" href="css/modalEffects.css" />
 <!-- Site Icons -->
 <link rel="shortcut icon" id="tag_logo2" href="images/favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -35,7 +35,10 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<head>
+
 </head>
+
 
 <body class="app_version" data-spy="scroll" data-target="#navbarApp" data-offset="98">
 
@@ -43,504 +46,532 @@
     <!-- <div id="preloader">
         <img class="preloader" src="images/loaders/loader-app.gif" alt="">
     </div> end loader -->
-    <!-- END LOADER -->
-    <div class="top-bar">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="left-soi">
-                        <ul>
-                            <li class="social-links"><a href="#"><i class="fa fa-apple"></i></a></li>
-                            <li class="social-links"><a href="#"><i class="fa fa-android"></i></a></li>
-                            <li class="social-links"><a href="#"><i class="fa fa-windows"></i></a></li>
+    <div class="containerBlur" id="containerBlurId">
+        <!-- END LOADER -->
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="left-soi">
+                            <ul>
+                                <li class="social-links"><a href="#"><i class="fa fa-apple"></i></a></li>
+                                <li class="social-links"><a href="#"><i class="fa fa-android"></i></a></li>
+                                <li class="social-links"><a href="#"><i class="fa fa-windows"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="right-btn">
+                            <a href="#aboutdiv" class="btn-radius btn-brd">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header header_style_01">
+            <nav class="navbar header-nav navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html"><img style="height: 48px;" id="tag_logo3" alt="image"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarApp"
+                        aria-controls="navbarApp" aria-expanded="false" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarApp">
+                        <ul class="navbar-nav">
+                            <li><a class="nav-link active" href="#home">Home</a></li>
+                            <li><a class="nav-link" href="#wrapper">Apps</a></li>
+                            <li><a class="nav-link" href="#featuredappdiv">Features</a></li>
+
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="right-btn">
-                        <a href="#aboutdiv" class="btn-radius btn-brd">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <header class="header header_style_01">
-        <nav class="navbar header-nav navbar-expand-lg">
+            </nav>
+        </header>
+
+        <div id="home" class="parallax first-section" style="background-image:url('uploads/bg-img.jpg');">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img style="height: 48px;" id="tag_logo3"  alt="image"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarApp"
-                    aria-controls="navbarApp" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarApp">
-                    <ul class="navbar-nav">
-                        <li><a class="nav-link active" href="#home">Home</a></li>
-                        <li><a class="nav-link" href="#wrapper">Apps</a></li>
-                        <li><a class="nav-link" href="#featuredappdiv">Features</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div id="home" class="parallax first-section" style="background-image:url('uploads/bg-img.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <div class="big-tagline">
-                        <h2 id="dev_tag2">DeveloperName Apps</h2>
-                        <p class="lead">With over 1 million+ worldwide downloads. </p>
-                        <a data-scroll target="_blank"
-                            href="https://play.google.com/store/apps/developer?id=CloudLab+Studio&hl=en"
-                            class="btn btn-light btn-radius btn-brd"> <i class="fa fa-play" aria-hidden="true"></i>
-                            GooglePlay </a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a data-scroll target="_blank" href="https://www.microsoft.com/en-us/search?q=amaze+studio"
-                            class="btn btn-light btn-radius btn-brd"><i class="fa fa-windows" aria-hidden="true"></i>
-                            Windows Store</a>
-                    </div>
-                </div>
-                <div class="app_iphone_01 wow slideInUp hidden-xs hidden-sm" data-wow-duration="1s"
-                    data-wow-delay="0.2s">
-                    <img src="uploads/app_iphone_01.png" alt="" class="img-fluid">
-                </div>
-                <div class="app_iphone_02 wow slideInUp hidden-xs hidden-sm" data-wow-duration="1s"
-                    data-wow-delay="0.5s">
-                    <img src="uploads/app_iphone_02.png" alt="" class="img-fluid">
-                </div>
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-    <div id="AdBlock">
-      
-    </div>
-
-
-
-    <!-- THIS IS HIDDEN -->
-    <div style="display:none" id="features" class="section wb">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Featured Products2</h3>
-                <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-                    quis bibendum<br>auctor nisi elit consequat ipsum, nec sagittis sem!</p>
-            </div><!-- end title -->
-
-            <div id="default" class="row clearfix zenith_slider">
-
-                <!--The First row-->
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 left-row">
-                    <ul class="features-left">
-                        <li class="highlight lhgh" data-index="0">
-                            <i class="flaticon-wordpress-logo effect-1"></i>
-                            <div class="fl-inner">
-                                <h4>WordPress Installation</h4>
-                                <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
-                            </div>
-                        </li><!-- .highlight .left-row -->
-
-                        <li class="highlight lhgh" data-index="1">
-                            <i class="flaticon-windows effect-1"></i>
-                            <div class="fl-inner">
-                                <h4>Browser Compatible</h4>
-                                <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
-                            </div>
-                        </li><!-- .highlight .left-row -->
-
-                        <li class="highlight lhgh" data-index="2">
-                            <i class="flaticon-price-tag effect-1"></i>
-                            <div class="fl-inner">
-                                <h4>eCommerce Ready</h4>
-                                <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
-                            </div>
-                        </li><!-- .highlight .left-row -->
-
-                        <li class="highlight lhgh" data-index="3">
-                            <i class="flaticon-new-file effect-1"></i>
-                            <div class="fl-inner">
-                                <h4>Easy to Customize</h4>
-                                <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
-                            </div>
-                        </li><!-- .highlight .left-row -->
-                    </ul>
-                </div><!-- .row .left-row -->
-
-                <div class="highlights-phone col-lg-4 col-md-4 col-sm-12 col-xs-12 wht">
-
-                    <div class="phone-holder">
-                        <div id="fon"></div>
-                        <div class="hgh-linner hgi" data-index="0">
-                            <img width="190" height="320" src="uploads/carousel_01.jpg"
-                                class="attachment-highlight wp-post-image" alt="screen" />
-                        </div>
-                        <div class="hgh-linner hgi" data-index="1">
-                            <img width="234" height="398" src="uploads/carousel_02.jpg"
-                                class="attachment-highlight wp-post-image" alt="screensdst" />
-                        </div>
-                        <div class="hgh-linner hgi" data-index="2">
-                            <img width="234" height="398" src="uploads/carousel_03.jpg"
-                                class="attachment-highlight wp-post-image" alt="screen_09" />
-                        </div>
-                        <div class="hgh-rinner hgi" data-index="3">
-                            <img width="234" height="398" src="uploads/carousel_04.jpg"
-                                class="attachment-highlight wp-post-image" alt="screen_07" />
-                        </div>
-                        <div class="hgh-rinner hgi" data-index="4">
-                            <img width="234" height="398" src="uploads/carousel_01.jpg"
-                                class="attachment-highlight wp-post-image" alt="screen_08" />
-                        </div>
-                        <div class="hgh-rinner hgi" data-index="5">
-                            <img width="234" height="398" src="uploads/carousel_01.jpg"
-                                class="attachment-highlight wp-post-image" alt="screen_06" />
-                        </div>
-                        <div class="hgh-rinner hgi" data-index="6">
-                            <img width="234" height="398" src="uploads/carousel_02.jpg"
-                                class="attachment-highlight wp-post-image" alt="screen_06" />
-                        </div>
-                        <div class="hgh-rinner hgi" data-index="7">
-                            <img width="234" height="398" src="uploads/carousel_03.jpg"
-                                class="attachment-highlight wp-post-image" alt="screen_06" />
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="big-tagline">
+                            <h2 id="dev_tag2">DeveloperName Apps</h2>
+                            <p class="lead">With over 1 million+ worldwide downloads. </p>
+                            <a data-scroll target="_blank"
+                                href="https://play.google.com/store/apps/developer?id=CloudLab+Studio&hl=en"
+                                class="btn btn-light btn-radius btn-brd"> <i class="fa fa-play" aria-hidden="true"></i>
+                                GooglePlay </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a data-scroll target="_blank" href="https://www.microsoft.com/en-us/search?q=amaze+studio"
+                                class="btn btn-light btn-radius btn-brd"><i class="fa fa-windows"
+                                    aria-hidden="true"></i>
+                                Windows Store</a>
                         </div>
                     </div>
-                </div>
-
-                <!--The Second row-->
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 right-row">
-                    <ul class="features-right">
-                        <li class="highlight rhgh" data-index="4">
-                            <i class="flaticon-pantone effect-1"></i>
-                            <div class="fr-inner">
-                                <h4>Limitless Colors</h4>
-                                <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
-                            </div>
-                        </li><!-- .highlight .left-row -->
-                        <li class="highlight rhgh" data-index="5">
-                            <i class="flaticon-cloud-computing effect-1"></i>
-                            <div class="fr-inner">
-                                <h4>Lifetime Update</h4>
-                                <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
-                            </div>
-                        </li><!-- .highlight .left-row -->
-                        <li class="highlight rhgh" data-index="6">
-                            <i class="flaticon-line-graph effect-1"></i>
-                            <div class="fr-inner">
-                                <h4>SEO Friendly</h4>
-                                <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                            </div>
-                        </li><!-- .highlight .left-row -->
-                        <li class="highlight rhgh" data-index="7">
-                            <i class="flaticon-coding effect-1"></i>
-                            <div class="fr-inner">
-                                <h4>Simple Clean Code</h4>
-                                <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
-                            </div>
-                        </li><!-- .highlight .left-row -->
-                    </ul>
-                </div><!-- .row .left-row -->
-
-            </div>
-            <!--Highlights close-->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-
-    <div class="wrapper" id="wrapper">
-
-        <div class="inner">
-            <style scoped>
-                @import "css/main.css";
-            </style>
-            <!-- Section -->
-            <section class="main">
-                <header class="major">
-                    <!-- Wrapper -->
-                    <h2 class="featuredheader">Featured Products</h2>
-                </header>
-                <div class="features">
-                    <section>
-                        <!--<span class="icon fa-camera major accent2"></span>-->
-                        <a href="https://www.microsoft.com/en-us/p/english-dictionary-offline/9nsmlkmc3wb6" target="_blank">
-                            <img style="margin:auto; height: 100px;" src="https://store-images.s-microsoft.com/image/apps.41769.14360665815359089.a883210a-6ba0-481b-b265-501e27f77adf.001e8efa-0ad2-4e8b-863d-7b08e8f045d5?mode=scale&q=90&h=270&w=270&background=%230078D7">
-                            <h3>English Dictionary - Offline</h3>
-                            <p>Look up any meaning of the certain english words and play word puzzle daily</p>
-                        </a>
-                    </section>
-                    <section>
-                        <a href="https://www.microsoft.com/en-us/p/master-file-locker/9nblggh4q8lf" target="_blank">
-                            <img style="margin:auto; height: 100px;" src="https://store-images.s-microsoft.com/image/apps.24734.13510798887378974.9128efa7-c413-48fb-8682-206635e5a029.424844c5-8b47-44c6-b5c3-d18ee8df1165?mode=scale&q=90&h=270&w=270&background=%230078D7">
-                            <h3>Master File Locker</h3>
-                            <p>Hide your photos and videos with file encryption or decryption.</p>
-                        </a>
-                    </section>
-                    <section>
-                        <a href="https://www.microsoft.com/en-us/p/quick-store/9wzdncrdxznt" target="_blank">
-                            <img style="margin:auto; height: 100px;"  src="https://store-images.s-microsoft.com/image/apps.12755.9007199266707778.6edfe856-dcf9-49b6-9fa6-b3a000fadda3.b893e95d-9564-4ab1-b1d0-70cd862dab97?mode=scale&q=90&h=270&w=270&background=%230078D7" >
-                            <h3>Quick Store</h3>
-                            <p>Manage product price and details with suppor fast lazer barcode reader </p>
-                        </a>
-                    </section>
-                    <section>
-                        <a href="https://play.google.com/store/apps/details?id=com.eaxysharebackup.shareapk" target="_blank">
-                            <img style="margin:auto; height: 100px;" src="https://play-lh.googleusercontent.com/11O7gU6OeNx-csj2JPpqzc_hF-mB5eIv1w-zQbVW-oNPmldOCTYz6WjtU0JUScNteg=s360-rw">
-                            <h3>Apps Share Easy Transfer/Send-Backup-Manager</h3>
-                            <p>Apps Share - is an app with simple design and useful for managing your apps, it helps us to share, save or back apk to sdcard or internal storage.</p>
-                        </a>
-                    </section>
-                    <!-- https://appsenjoy.com/delete/c119635d846f4a8eabfadc9487011b79.html -->
-                    <section>
-                        <a onclick="return confirm('Download iStore Apps APK?');" href="https://onedrive.live.com/download?cid=27AA3488FD31EE95&resid=27AA3488FD31EE95%21100405&authkey=AJFKHEKGC0cQ26U" target="_blank">
-                            <img style="margin:auto; height: 100px;" src="https://lh3.googleusercontent.com/L2g69JzcmYNLRSbXSp0s-hW4Xk6RafbUxSUciJQsroINTc8PuTidm0zjMjxftqMkNvM">
-                            <h3>iStore Apps (Browse iOS Store)</h3>
-                            <p>Browse iPhone apps store with your android phone.</p>
-                        </a>
-                    </section>
-                    <section>
-                        <a  href="https://www.microsoft.com/en-us/p/xaml-path-icons/9mtbnqsz9nz9" target="_blank">
-                            <img style="margin:auto; height: 100px;" src="https://store-images.s-microsoft.com/image/apps.226.13811465872225312.9a6edea0-53fc-45e8-b07d-06be42db6ffa.5901bdcc-7f4b-414d-b90e-a9468c2fc42d?mode=scale&q=90&h=270&w=270&background=%230078D7">
-                            <h3>XAML Path Icons</h3>
-                            <p>Browse thousand of complete list of xaml, svg and drawable path icons, works offline</p>
-                        </a>
-                    </section>
-                    <section>
-                        <a  href="https://www.microsoft.com/store/productId/9PM98T5CX376" target="_blank">
-                            <img style="margin:auto; height: 100px;" src="https://store-images.s-microsoft.com/image/apps.35619.14301701709326003.6501c289-eefc-48f4-aa93-40c86aaa9931.f83ec86c-eeac-4afe-b359-687ab6f68d25?mode=scale&q=90&h=270&w=270&background=%230078D7">
-                            <h3>Multilingual App Toolkit - App Localization</h3>
-                            <p>Translate or localize Apps for Windows, Android, iOS and Flutter Apps. Auto generated multiple translation with Microsoft Bing Translator API. (UWP, Uno Platform, WinUI, Xamarin, MAUI.Net, Android, iOS and Flutter)</p>
-                        </a>
-                    </section>
-                </div>
-            </section>
+                    <div class="app_iphone_01 wow slideInUp hidden-xs hidden-sm" data-wow-duration="1s"
+                        data-wow-delay="0.2s">
+                        <img src="uploads/app_iphone_01.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="app_iphone_02 wow slideInUp hidden-xs hidden-sm" data-wow-duration="1s"
+                        data-wow-delay="0.5s">
+                        <img src="uploads/app_iphone_02.png" alt="" class="img-fluid">
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+        <div id="AdBlock">
 
         </div>
-    </div>
-    <div id="featuredappdiv" class="how-its-work clearfix">
-        <div class="hc colon1">
-            <h2>1</h2>
-            <h3>Fast Downloads</h3>
-            <p class="lead">Our app, has only small size of mb.</p>
-        </div><!-- end col -->
 
-        <div class="hc colon2">
-            <h2>2</h2>
-            <h3>Nice Design</h3>
-            <p class="lead">We have artful and intuitive user interfaces that you will enjoy.</p>
-        </div><!-- end col -->
 
-        <div class="hc colon3">
-            <h2>3</h2>
-            <h3>Well Rated</h3>
-            <p class="lead">We've averaged 4½★ over 1M+ downloads.</p>
-        </div><!-- end col -->
 
-        <div class="hc colon4">
-            <h2>4</h2>
-            <h3>Maintainable</h3>
-            <p class="lead">Reusable and maintainable updates.</p>
-        </div><!-- end col -->
-    </div><!-- end how-its-work -->
+        <!-- THIS IS HIDDEN -->
+        <div style="display:none" id="features" class="section wb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Featured Products2</h3>
+                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                        lorem
+                        quis bibendum<br>auctor nisi elit consequat ipsum, nec sagittis sem!</p>
+                </div><!-- end title -->
 
-    <div id="screenshots" class="section wb">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Screenshots of the App</h3>
-                <p class="lead">View of these some screenshot<br>Basic screenshots we will update later</p>
-            </div><!-- end title -->
+                <div id="default" class="row clearfix zenith_slider">
 
-            <div class="owl-screenshots owl-carousel owl-theme">
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_01.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
+                    <!--The First row-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 left-row">
+                        <ul class="features-left">
+                            <li class="highlight lhgh" data-index="0">
+                                <i class="flaticon-wordpress-logo effect-1"></i>
+                                <div class="fl-inner">
+                                    <h4>WordPress Installation</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
+                                </div>
+                            </li><!-- .highlight .left-row -->
+
+                            <li class="highlight lhgh" data-index="1">
+                                <i class="flaticon-windows effect-1"></i>
+                                <div class="fl-inner">
+                                    <h4>Browser Compatible</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
+                                </div>
+                            </li><!-- .highlight .left-row -->
+
+                            <li class="highlight lhgh" data-index="2">
+                                <i class="flaticon-price-tag effect-1"></i>
+                                <div class="fl-inner">
+                                    <h4>eCommerce Ready</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
+                                </div>
+                            </li><!-- .highlight .left-row -->
+
+                            <li class="highlight lhgh" data-index="3">
+                                <i class="flaticon-new-file effect-1"></i>
+                                <div class="fl-inner">
+                                    <h4>Easy to Customize</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
+                                </div>
+                            </li><!-- .highlight .left-row -->
+                        </ul>
+                    </div><!-- .row .left-row -->
+
+                    <div class="highlights-phone col-lg-4 col-md-4 col-sm-12 col-xs-12 wht">
+
+                        <div class="phone-holder">
+                            <div id="fon"></div>
+                            <div class="hgh-linner hgi" data-index="0">
+                                <img width="190" height="320" src="uploads/carousel_01.jpg"
+                                    class="attachment-highlight wp-post-image" alt="screen" />
+                            </div>
+                            <div class="hgh-linner hgi" data-index="1">
+                                <img width="234" height="398" src="uploads/carousel_02.jpg"
+                                    class="attachment-highlight wp-post-image" alt="screensdst" />
+                            </div>
+                            <div class="hgh-linner hgi" data-index="2">
+                                <img width="234" height="398" src="uploads/carousel_03.jpg"
+                                    class="attachment-highlight wp-post-image" alt="screen_09" />
+                            </div>
+                            <div class="hgh-rinner hgi" data-index="3">
+                                <img width="234" height="398" src="uploads/carousel_04.jpg"
+                                    class="attachment-highlight wp-post-image" alt="screen_07" />
+                            </div>
+                            <div class="hgh-rinner hgi" data-index="4">
+                                <img width="234" height="398" src="uploads/carousel_01.jpg"
+                                    class="attachment-highlight wp-post-image" alt="screen_08" />
+                            </div>
+                            <div class="hgh-rinner hgi" data-index="5">
+                                <img width="234" height="398" src="uploads/carousel_01.jpg"
+                                    class="attachment-highlight wp-post-image" alt="screen_06" />
+                            </div>
+                            <div class="hgh-rinner hgi" data-index="6">
+                                <img width="234" height="398" src="uploads/carousel_02.jpg"
+                                    class="attachment-highlight wp-post-image" alt="screen_06" />
+                            </div>
+                            <div class="hgh-rinner hgi" data-index="7">
+                                <img width="234" height="398" src="uploads/carousel_03.jpg"
+                                    class="attachment-highlight wp-post-image" alt="screen_06" />
+                            </div>
                         </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_02.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_03.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_04.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_05.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_06.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_01.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_02.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_03.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_04.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_05.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-                <div class="owl-screen">
-                    <div class="service-widget">
-                        <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_06.png" data-rel="prettyPhoto[gal]"
-                                class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
-                            <div class="magnifier"></div>
-                        </div>
-                    </div><!-- end service -->
-                </div><!-- end col -->
-
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-    <div class="parallax section noover" style="background-image:url('uploads/ben_img.jpg');">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-7 col-sm-12">
-                    <div class="customwidget text-left">
-                        <h1>Download our app</h1>
-                        <p>Try some of our app and enjoy</p>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><i class="flaticon-windows"></i> Available on Windows</li>
-                            <!-- <li class="list-inline-item"><i class="flaticon-apple"></i> Available on Apple</li> -->
-                            <li class="list-inline-item"><i class="flaticon-android"></i> Available on Android</li>
-                            <!-- <li class="list-inline-item"><i class="flaticon-amazon-logo"></i> Available on Amazon</li> -->
-                        </ul><!-- end list -->
-                        <a href="#features" data-scroll class="btn btn-light btn-radius btn-brd">Learn More</a>
                     </div>
-                </div><!-- end col -->
-                <div class="col-md-6 iphones hidden-sm">
-                    <div class="text-center move image-center hidden-sm hidden-xs">
-                        <img src="uploads/iphones.png" alt="" class="img-fluid wow fadeInUp">
-                    </div>
+
+                    <!--The Second row-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 right-row">
+                        <ul class="features-right">
+                            <li class="highlight rhgh" data-index="4">
+                                <i class="flaticon-pantone effect-1"></i>
+                                <div class="fr-inner">
+                                    <h4>Limitless Colors</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
+                                </div>
+                            </li><!-- .highlight .left-row -->
+                            <li class="highlight rhgh" data-index="5">
+                                <i class="flaticon-cloud-computing effect-1"></i>
+                                <div class="fr-inner">
+                                    <h4>Lifetime Update</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet.</p>
+                                </div>
+                            </li><!-- .highlight .left-row -->
+                            <li class="highlight rhgh" data-index="6">
+                                <i class="flaticon-line-graph effect-1"></i>
+                                <div class="fr-inner">
+                                    <h4>SEO Friendly</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li><!-- .highlight .left-row -->
+                            <li class="highlight rhgh" data-index="7">
+                                <i class="flaticon-coding effect-1"></i>
+                                <div class="fr-inner">
+                                    <h4>Simple Clean Code</h4>
+                                    <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                                </div>
+                            </li><!-- .highlight .left-row -->
+                        </ul>
+                    </div><!-- .row .left-row -->
+
                 </div>
-                
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+                <!--Highlights close-->
+            </div><!-- end container -->
+        </div><!-- end section -->
 
-    <footer class="footer">
-        <div class="container" id="aboutdiv">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <img id="tag_logo" style="height: 48px;" alt="">
-                            <small>Our Apps</small> </div>
-                        <p>More Apps coming</p>
-                        <p>Enjoy the browsing
-                        </p>
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
 
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Contact Details</h3>
+        <div class="wrapper" id="wrapper">
+
+            <div class="inner">
+                <style scoped>
+                    @import "css/main.css";
+                </style>
+                <!-- Section -->
+                <section class="main">
+                    <header class="major">
+                        <!-- Wrapper -->
+                        <h2 class="featuredheader">Featured Products</h2>
+                    </header>
+                    <div class="features">
+                        <section>
+                            <!--<span class="icon fa-camera major accent2"></span>-->
+                            <!-- href="https://www.microsoft.com/en-us/p/english-dictionary-offline/9nsmlkmc3wb6" -->
+                            <div>
+                                <a  href="javascript:void(0);"
+                                    data-platform='[{"Store": "https://play.google.com/store/apps/details?id=com.cloudlabstudio.englishdictionary"}, {"Store": "https://www.microsoft.com/en-us/p/english-dictionary-offline/9nsmlkmc3wb6"}]'
+                                     class="md-trigger" data-modal="modal-1">
+                                    <img style="margin:auto; height: 100px;"
+                                        src="https://store-images.s-microsoft.com/image/apps.41769.14360665815359089.a883210a-6ba0-481b-b265-501e27f77adf.001e8efa-0ad2-4e8b-863d-7b08e8f045d5?mode=scale&q=90&h=270&w=270&background=%230078D7">
+                                    <h3>English Dictionary - Offline</h3>
+                                    <p>Look up any meaning of the certain english words and play word puzzle daily</p>
+
+                                </a>
+
+                            </div>
+                        </section>
+                        <section>
+                            <a href="https://www.microsoft.com/en-us/p/master-file-locker/9nblggh4q8lf" target="_blank">
+                                <img style="margin:auto; height: 100px;"
+                                    src="https://store-images.s-microsoft.com/image/apps.24734.13510798887378974.9128efa7-c413-48fb-8682-206635e5a029.424844c5-8b47-44c6-b5c3-d18ee8df1165?mode=scale&q=90&h=270&w=270&background=%230078D7">
+                                <h3>Master File Locker</h3>
+                                <p>Hide your photos and videos with file encryption or decryption.</p>
+                            </a>
+                        </section>
+                        <section>
+                            
+                            <a href="javascript:void(0);"
+                            data-platform='[{"Store": "https://play.google.com/store/apps/details?id=com.cloudlabstudio.grocerypricetracker"}, {"Store": "https://www.microsoft.com/en-us/p/quick-store/9wzdncrdxznt"}]'
+                             class="md-trigger" data-modal="modal-1">
+                                <img style="margin:auto; height: 100px;"
+                                    src="https://store-images.s-microsoft.com/image/apps.12755.9007199266707778.6edfe856-dcf9-49b6-9fa6-b3a000fadda3.b893e95d-9564-4ab1-b1d0-70cd862dab97?mode=scale&q=90&h=270&w=270&background=%230078D7">
+                                <h3>Quick Store</h3>
+                                <p>Manage product price and details with suppor fast lazer barcode reader </p>
+                            </a>
+                        </section>
+                        <section>
+                            <a href="https://play.google.com/store/apps/details?id=com.eaxysharebackup.shareapk"
+                                target="_blank">
+                                <img style="margin:auto; height: 100px;"
+                                    src="https://play-lh.googleusercontent.com/11O7gU6OeNx-csj2JPpqzc_hF-mB5eIv1w-zQbVW-oNPmldOCTYz6WjtU0JUScNteg=s360-rw">
+                                <h3>Apps Share Easy Transfer/Send-Backup-Manager</h3>
+                                <p>Apps Share - is an app with simple design and useful for managing your apps, it helps
+                                    us
+                                    to share, save or back apk to sdcard or internal storage.</p>
+                            </a>
+                        </section>
+                        <!-- https://appsenjoy.com/delete/c119635d846f4a8eabfadc9487011b79.html -->
+                        <section>
+                            <a onclick="return confirm('Download iStore Apps APK?');"
+                                href="https://onedrive.live.com/download?cid=27AA3488FD31EE95&resid=27AA3488FD31EE95%21100405&authkey=AJFKHEKGC0cQ26U"
+                                target="_blank">
+                                <img style="margin:auto; height: 100px;"
+                                    src="https://lh3.googleusercontent.com/L2g69JzcmYNLRSbXSp0s-hW4Xk6RafbUxSUciJQsroINTc8PuTidm0zjMjxftqMkNvM">
+                                <h3>iStore Apps (Browse iOS Store)</h3>
+                                <p>Browse iPhone apps store with your android phone.</p>
+                            </a>
+                        </section>
+                        <section>
+                            <a href="https://www.microsoft.com/en-us/p/xaml-path-icons/9mtbnqsz9nz9" target="_blank">
+                                <img style="margin:auto; height: 100px;"
+                                    src="https://store-images.s-microsoft.com/image/apps.226.13811465872225312.9a6edea0-53fc-45e8-b07d-06be42db6ffa.5901bdcc-7f4b-414d-b90e-a9468c2fc42d?mode=scale&q=90&h=270&w=270&background=%230078D7">
+                                <h3>XAML Path Icons</h3>
+                                <p>Browse thousand of complete list of xaml, svg and drawable path icons, works offline
+                                </p>
+                            </a>
+                        </section>
+                        <section>
+                            <a href="https://www.microsoft.com/store/productId/9PM98T5CX376" target="_blank">
+                                <img style="margin:auto; height: 100px;"
+                                    src="https://store-images.s-microsoft.com/image/apps.35619.14301701709326003.6501c289-eefc-48f4-aa93-40c86aaa9931.f83ec86c-eeac-4afe-b359-687ab6f68d25?mode=scale&q=90&h=270&w=270&background=%230078D7">
+                                <h3>Multilingual App Toolkit - App Localization</h3>
+                                <p>Translate or localize Apps for Windows, Android, iOS and Flutter Apps. Auto generated
+                                    multiple translation with Microsoft Bing Translator API. (UWP, Uno Platform, WinUI,
+                                    Xamarin, MAUI.Net, Android, iOS and Flutter)</p>
+                            </a>
+                        </section>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <div id="featuredappdiv" class="how-its-work clearfix">
+            <div class="hc colon1">
+                <h2>1</h2>
+                <h3>Fast Downloads</h3>
+                <p class="lead">Our app, has only small size of mb.</p>
+            </div><!-- end col -->
+
+            <div class="hc colon2">
+                <h2>2</h2>
+                <h3>Nice Design</h3>
+                <p class="lead">We have artful and intuitive user interfaces that you will enjoy.</p>
+            </div><!-- end col -->
+
+            <div class="hc colon3">
+                <h2>3</h2>
+                <h3>Well Rated</h3>
+                <p class="lead">We've averaged 4½★ over 1M+ downloads.</p>
+            </div><!-- end col -->
+
+            <div class="hc colon4">
+                <h2>4</h2>
+                <h3>Maintainable</h3>
+                <p class="lead">Reusable and maintainable updates.</p>
+            </div><!-- end col -->
+        </div><!-- end how-its-work -->
+
+        <div id="screenshots" class="section wb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Screenshots of the App</h3>
+                    <p class="lead">View of these some screenshot<br>Basic screenshots we will update later</p>
+                </div><!-- end title -->
+
+                <div class="owl-screenshots owl-carousel owl-theme">
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_01.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_02.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_03.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_04.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_05.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_06.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_01.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_02.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_03.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_04.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_05.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                    <div class="owl-screen">
+                        <div class="service-widget">
+                            <div class="post-media entry wow fadeIn">
+                                <a href="uploads/screenshot_06.png" data-rel="prettyPhoto[gal]"
+                                    class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                <img src="uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
+                                <div class="magnifier"></div>
+                            </div>
+                        </div><!-- end service -->
+                    </div><!-- end col -->
+
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+
+        <div class="parallax section noover" style="background-image:url('uploads/ben_img.jpg');">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-7 col-sm-12">
+                        <div class="customwidget text-left">
+                            <h1>Download our app</h1>
+                            <p>Try some of our app and enjoy</p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="flaticon-windows"></i> Available on Windows</li>
+                                <!-- <li class="list-inline-item"><i class="flaticon-apple"></i> Available on Apple</li> -->
+                                <li class="list-inline-item"><i class="flaticon-android"></i> Available on Android</li>
+                                <!-- <li class="list-inline-item"><i class="flaticon-amazon-logo"></i> Available on Amazon</li> -->
+                            </ul><!-- end list -->
+                            <a href="#features" data-scroll class="btn btn-light btn-radius btn-brd">Learn More</a>
                         </div>
+                    </div><!-- end col -->
+                    <div class="col-md-6 iphones hidden-sm">
+                        <div class="text-center move image-center hidden-sm hidden-xs">
+                            <img src="uploads/iphones.png" alt="" class="img-fluid wow fadeInUp">
+                        </div>
+                    </div>
 
-                        <ul class="footer-links">
-                            <li><a id="tag_contact_email" href="mailto:#">ContactEmail</a></li>
-                            <li><a id="site_tag" href="#">SiteName</a></li>
-                            <li>Richmond Vill 1744</li>
-                            <!-- <li>+61 3 8376 6000</li> -->
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-                <!-- <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+
+        <footer class="footer">
+            <div class="container" id="aboutdiv">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="widget clearfix">
+                            <div class="widget-title">
+                                <img id="tag_logo" style="height: 48px;" alt="">
+                                <small>Our Apps</small> </div>
+                            <p>More Apps coming</p>
+                            <p>Enjoy the browsing
+                            </p>
+                        </div><!-- end clearfix -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="widget clearfix">
+                            <div class="widget-title">
+                                <h3>Contact Details</h3>
+                            </div>
+
+                            <ul class="footer-links">
+                                <li><a id="tag_contact_email" href="mailto:#">ContactEmail</a></li>
+                                <li><a id="site_tag" href="#">SiteName</a></li>
+                                <li>Richmond Vill 1744</li>
+                                <!-- <li>+61 3 8376 6000</li> -->
+                            </ul><!-- end links -->
+                        </div><!-- end clearfix -->
+                    </div><!-- end col -->
+                    <!-- <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
                    
                     <div class="widget clearfix">
                        
@@ -556,30 +587,33 @@
                         </ul>
                     </div>
                 </div> -->
-               
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </footer><!-- end footer -->
 
-    <div class="copyrights">
-        <div class="container">
-            <div class="footer-distributed">
-                <div class="footer-left">
-                    <p id="date_Tag" class="footer-company-name">All Rights Reserved. &copy; 2011-2020 <a id="dev_tag" href="#">DeveloperName</a>
-                        Design By :
-                        <a id="dev_tag1" href="https://html.design/">DeveloperName Team</a></p>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        <div class="copyrights">
+            <div class="container">
+                <div class="footer-distributed">
+                    <div class="footer-left">
+                        <p id="date_Tag" class="footer-company-name">All Rights Reserved. &copy; 2011-2020 <a
+                                id="dev_tag" href="#">DeveloperName</a>
+                            Design By :
+                            <a id="dev_tag1" href="https://html.design/">DeveloperName Team</a></p>
+                    </div>
                 </div>
-            </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
+            </div><!-- end container -->
+        </div><!-- end copyrights -->
 
-    <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+        <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
+    </div>
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/zenith.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         $('#default').zenith({
             layout: 'default',
@@ -617,28 +651,46 @@
                     var dev_Tag2 = document.getElementById("dev_tag2");
                     dev_Tag2.innerHTML = dev_Tag2.innerHTML.replace(/DeveloperName/g, Developer);
                     document.title = Developer;
-                     //Contact
-                     var site_tag = document.getElementById("site_tag");
-                     site_tag.innerHTML = site_tag.innerHTML.replace(/SiteName/g, site);
+                    //Contact
+                    var site_tag = document.getElementById("site_tag");
+                    site_tag.innerHTML = site_tag.innerHTML.replace(/SiteName/g, site);
 
-                     //Logo
-                     var tag_logo = document.getElementById("tag_logo");
-                     tag_logo.src = logo;
+                    //Logo
+                    var tag_logo = document.getElementById("tag_logo");
+                    tag_logo.src = logo;
 
-                      //Logo
-                      var tag_logo3 = document.getElementById("tag_logo3");
-                     tag_logo3.src = logo;
+                    //Logo
+                    var tag_logo3 = document.getElementById("tag_logo3");
+                    tag_logo3.src = logo;
 
-                     var tag_logo2 = document.getElementById("tag_logo2");
-                     tag_logo2.href = favIcon;
+                    var tag_logo2 = document.getElementById("tag_logo2");
+                    tag_logo2.href = favIcon;
 
-                     
+
                 }
             };
             xhr.send();
+
         }
     </script>
- 
+
+    <!-- the overlay element -->
+    <div id="md-overlayId" class="md-overlay"></div>
+    <div class="md-modal md-effect-1" id="modal-1">
+        <div class="md-content">
+            <h3 style="color: white;">Select Platform</h3>
+            <div>
+                <div id="appContainer" style="margin: auto; display: inline; text-align: center; display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+                </div>
+                <button class="md-close" style="margin-top: 10px;">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/modalEffects.js"></script>
+    <script type="text/javascript" src="js/mycode.js"></script>
 </body>
 
 </html>
