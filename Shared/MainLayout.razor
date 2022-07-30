@@ -3,5 +3,13 @@
     @Body
 </body>
 @code{
-
+    public static MainLayout Current { get; private set; }
+    public static Helpers.DevInfo devInfo = null;
+    protected async override void OnInitialized()
+    {
+        base.OnInitialized();
+        Current = this;
+        
+        StateHasChanged();
+    }
 }

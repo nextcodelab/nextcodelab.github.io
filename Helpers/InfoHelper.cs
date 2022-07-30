@@ -46,10 +46,21 @@
         public string Date { get; set; }
         public string Address { get; set; }
         public string Logo { get; set; }
-
+        public string Application { get; set; }
         public string FavIcon { get; set; }
         public string BuyCoffee { get; set; }
         public string Paypal { get; set; }
         public string Site { get; set; }
+    }
+    public class AppItemData
+    {
+        public string Title { get; set; }
+        public List<AppItem> Items { get; set; }
+    }
+    public class AppItem
+    {
+        public string Title { get; set; }
+        public string Image { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -1,0 +1,10 @@
+﻿{
+  "Title": "Apps",
+  "Items": [
+    {
+      "Title": "WinUI Gallery",
+      "Image": "Shows all of the XAML UI components in an interactive format. This app is the interactive companion to the Fluent Design Guidelines and shows the usage of the WinUI APIs.",
+      "Description": "https://apps.microsoft.com/store/detail/neptuo-money/9N50XHGW891S"
+    }
+  ]
+}
