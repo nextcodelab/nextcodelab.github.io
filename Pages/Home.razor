@@ -103,8 +103,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
-                            <img style="height:35px;" src="@devInfo.FavIcon" alt="">
-                            <small>App Landing</small>
+                            @if(devInfo!=null)
+                            {
+                                <img style="height:35px;" src="@devInfo.FavIcon" alt="">
+                                <small>App Landing</small>
+                            }
                         </div>
 
                     </div><!-- end clearfix -->
@@ -120,7 +123,7 @@
                                 <ul class="footer-links">
                                     <li><a href="mailto:@devInfo.Email">Contact Us</a></li>
                                     <li><a href="#">@devInfo.Site</a></li>
-                                    <li><a href="/privacy">Privacy Terms</a></li>
+                                    <li><a href="">Privacy Terms</a></li>
                                     <li>@devInfo.Address</li>
                                 </ul>
 

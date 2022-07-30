@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Main\" />
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
