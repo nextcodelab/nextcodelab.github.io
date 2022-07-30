@@ -1,9 +1,9 @@
 ﻿<section>
     <!--<span class="icon fa-camera major accent2"></span>-->
-    <a href="/systempanel">
-        <img style="margin:auto;" src="images/appicons/appicon.png">
-        <h3>SystemPanel 2</h3>
-        <p>Keep your Android in perfect running order.</p>
+    <a href="@Item.Url" target="_blank">
+        <img style="margin:auto;" src="@Item.Image">
+        <h3>@Item.Title</h3>
+        <p>@Item.Description</p>
     </a>
 </section>
 
@@ -13,5 +13,5 @@
         base.OnInitialized();
     }
     [Parameter]
-    
+    public AppItem  Item { get; set; }
 }

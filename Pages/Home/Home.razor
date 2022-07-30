@@ -51,35 +51,14 @@
                     <h2 class="featuredheader">Featured Products</h2>
                 </header>
                 <div class="features">
-                    <section>
-                        <!--<span class="icon fa-camera major accent2"></span>-->
-                        <a href="/systempanel">
-                            <img style="margin:auto;" src="images/appicons/appicon.png">
-                            <h3>SystemPanel 2</h3>
-                            <p>Keep your Android in perfect running order.</p>
-                        </a>
-                    </section>
-                    <section>
-                        <a href="/fx">
-                            <img style="margin:auto;" src="images/appicons/appicon.png">
-                            <h3>FX File Explorer</h3>
-                            <p>The file manager that lets you do real work on your Android.</p>
-                        </a>
-                    </section>
-                    <section>
-                        <a href="/atlas">
-                            <img style="margin:auto;" src="images/appicons/appicon.png">
-                            <h3>Atlas Web Browser</h3>
-                            <p>Browse without draining your battery or your mind.</p>
-                        </a>
-                    </section>
-                    <section>
-                        <a href="/atlas">
-                            <img style="margin:auto;" src="images/appicons/appicon.png">
-                            <h3>Atlas Web Browser</h3>
-                            <p>Browse without draining your battery or your mind.</p>
-                        </a>
-                    </section>
+                   @if(appItemData!=null)
+                   {
+                       foreach (var item in appItemData.Items)
+                       {
+                           <AppItemView Item="item"></AppItemView>
+                       }
+                   }
+                 
                 </div>
             </section>
 
