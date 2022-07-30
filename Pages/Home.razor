@@ -10,7 +10,10 @@
     <header style="background-color:whitesmoke;" class="header header_style_01">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img style="height:35px;" src="@devInfo.FavIcon" alt="image"></a>
+                @if(devInfo!=null)
+                {
+                    <a class="navbar-brand" href="index.html"><img style="height:35px;" src="@devInfo.FavIcon" alt="image"></a>
+                }
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarApp"
                         aria-controls="navbarApp" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
@@ -123,7 +126,7 @@
                                 <ul class="footer-links">
                                     <li><a href="mailto:@devInfo.Email">Contact Us</a></li>
                                     <li><a href="#">@devInfo.Site</a></li>
-                                    <li><a href="">Privacy Terms</a></li>
+                                    <li><a href="@devInfo.Privacy">Privacy Terms</a></li>
                                     <li>@devInfo.Address</li>
                                 </ul>
 

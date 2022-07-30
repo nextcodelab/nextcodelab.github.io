@@ -14,6 +14,7 @@
             {
                 devInfo = Newtonsoft.Json.JsonConvert.DeserializeObject<DevInfo>(json);   
             }
+            var d = devInfo;
             return devInfo;
         }
         public static async Task<string> DownloadStringAsync(string txtFileUrl)
