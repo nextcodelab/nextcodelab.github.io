@@ -54,6 +54,17 @@
     }
     public class AppItemData
     {
+        public static async Task<AppItemData> GetAppItemDataAsync()
+        {
+            AppItemData appItemData = null;
+            var raw = "https://raw.githubusercontent.com/nextcodelab/nextcodelab.github.io/main/Helpers/Host/apps.json";
+            var json = await InfoHelper.DownloadStringAsync(raw);
+            if (!string.IsNullOrEmpty(json))
+            {
+                appItemData = Newtonsoft.Json.JsonConvert.DeserializeObject<AppItemData>(json);
+            }
+            return appItemData;
+        }
         public string Title { get; set; }
         public List<AppItem> Items { get; set; }
     }
@@ -62,5 +73,6 @@
         public string Title { get; set; }
         public string Image { get; set; }
         public string Description { get; set; }
+        public string Url { get; set; }
     }
 }

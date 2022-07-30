@@ -2,9 +2,10 @@
   "Title": "Apps",
   "Items": [
     {
-      "Title": "WinUI Gallery",
-      "Image": "Shows all of the XAML UI components in an interactive format. This app is the interactive companion to the Fluent Design Guidelines and shows the usage of the WinUI APIs.",
-      "Description": "https://apps.microsoft.com/store/detail/neptuo-money/9N50XHGW891S"
+      "Title": "Bible - Multi Version",
+      "Image": "Bible - Multi Version is a Fast, light, offline bible for your daily study.",
+      "Description": "https://apps.microsoft.com/store/detail/neptuo-money/9N50XHGW891S",
+      "Url": "https://apps.microsoft.com/store/detail/bible-multi-version/9PPRWS532N91"
     }
   ]
 }
