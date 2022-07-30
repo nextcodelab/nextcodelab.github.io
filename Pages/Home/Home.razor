@@ -22,7 +22,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarApp">
                     <ul class="navbar-nav">
-                        <li><a class="nav-link active" href="#home">Home</a></li>
+                        <li><a class="nav-link active" href="/">Home</a></li>
                         @* <li><a class="nav-link" href="#wrapper">Apps</a></li>
                         <li><a class="nav-link" href="#featuredappdiv">Features</a></li>*@
                     </ul>
@@ -104,7 +104,7 @@
                         {
                             <ul class="footer-links">
                                 <li><a href="mailto:@MainLayout.devInfo.Email">Contact Us</a></li>
-                                <li><a href="#">@MainLayout.devInfo.Site</a></li>
+                                <li><a href="/">@MainLayout.devInfo.Site</a></li>
                                 <li><a href="/privacy">Privacy Terms</a></li>
                                 <li>@MainLayout.devInfo.Address</li>
                             </ul>
@@ -128,7 +128,7 @@
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
 
-                <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+                @*<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
                             <h3>Social</h3>
@@ -137,7 +137,7 @@
                             <li><a href="#"><i class="fa fa-github"></i> Github</a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
-                </div><!-- end col -->
+                </div><!-- end col -->*@
             </div><!-- end row -->
         </div><!-- end container -->
     </footer><!-- end footer -->
@@ -159,7 +159,7 @@
         </div><!-- end container -->
     </div><!-- end copyrights -->
 
-    <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+    <a @onclick="@ScrollToTop" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
 
 
