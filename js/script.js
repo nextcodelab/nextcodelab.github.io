@@ -1,5 +1,6 @@
 // script.js
-
+// Theme configuration
+const DARK_IS_PREFERRED = false;
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
 
@@ -17,23 +18,26 @@ function initTheme() {
   const themeToggle = document.getElementById("theme-toggle");
   const root = document.documentElement;
   const storedTheme = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
-    root.setAttribute("data-theme", "dark");
-    if (themeToggle) themeToggle.textContent = "☀️";
-  }
+  // Use saved preference first, otherwise use configured default
+  const theme = storedTheme || (DARK_IS_PREFERRED ? "dark" : "light");
+
+  root.setAttribute("data-theme", theme);
 
   if (themeToggle) {
+    themeToggle.textContent = theme === "dark" ? "☀️" : "🌙";
+
     themeToggle.addEventListener("click", () => {
       const isDark = root.getAttribute("data-theme") === "dark";
-      root.setAttribute("data-theme", isDark ? "light" : "dark");
-      localStorage.setItem("theme", isDark ? "light" : "dark");
-      themeToggle.textContent = isDark ? "🌙" : "☀️";
+      const newTheme = isDark ? "light" : "dark";
+
+      root.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+
+      themeToggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
     });
   }
 }
-
 /* --- Home Page Rendering & Filtering --- */
 function initHomePage() {
   const grid = document.getElementById("app-grid");
