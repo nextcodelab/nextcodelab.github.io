@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextCodeLab | Apps Built to be Useful</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">NextCodeLab</a>
+            <div class="nav-links">
+                <a href="#apps">Apps</a>
+                <a href="#about">About</a>
+                <button id="theme-toggle" class="btn-secondary btn" style="padding: 0.4rem 0.8rem;">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero container">
+            <h1>Apps made to be useful.</h1>
+            <p>A portfolio of high-quality applications and utility tools designed for Windows, Android, iOS, and the
+                web.</p>
+        </header>
+
+        <section id="apps" class="container">
+            <div class="section-header">
+                <h2>All Applications</h2>
+                <div class="category-filters">
+                    <button class="filter-chip active" data-filter="all">All</button>
+                    <button class="filter-chip" data-filter="productivity">Productivity</button>
+                    <button class="filter-chip" data-filter="bible">Bible</button>
+                    <button class="filter-chip" data-filter="utilities">Utilities</button>
+                </div>
+            </div>
+
+            <!-- JavaScript will inject all app cards here automatically -->
+            <div class="app-grid" id="app-grid"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <!-- Brand -->
+            <div class="footer-column footer-brand">
+
+                <a href="/" class="footer-logo">
+
+                    <img data-site-logo alt="" loading="lazy">
+
+                    <span>
+                        <strong data-site-name></strong>
+                        <small data-company-tagline></small>
+                    </span>
+
+                </a>
+
+                <p data-company-description></p>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a data-contact-email>
+                            <i class="fa fa-envelope"></i>
+                            Contact Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-site-website>
+                            <i class="fa fa-globe"></i>
+                            Website
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Legal -->
+            <div class="footer-column">
+
+                <h3>Legal</h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a data-privacy-link>
+                            <i class="fa fa-shield"></i>
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-terms-link>
+                            <i class="fa fa-file-text"></i>
+                            Terms &amp; Conditions
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- About -->
+            <div class="footer-column">
+
+                <h3 data-footer-about-title>
+                    About NextCodeLab
+                </h3>
+
+                <p data-footer-about></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="container footer-bottom">
+
+            <p>
+                &copy;
+                <span data-copyright></span>
+                <strong data-site-name></strong>.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Scroll to top -->
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+
+        <i class="fa fa-angle-up"></i>
+
+    </button>
+
+    <!-- Shared JavaScript -->
+    <script src="/js/data.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/legal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Details - NextCodeLab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">NextCodeLab</a>
+            <button id="theme-toggle" class="btn-secondary btn" style="padding: 0.4rem 0.8rem;">🌙</button>
+        </div>
+    </nav>
+
+    <main class="container" id="app-detail-container">
+        <header class="app-detail-header">
+            <img src="" id="app-icon" alt="App Icon" class="app-detail-icon">
+            <div class="app-detail-info">
+                <h1 id="app-title"></h1>
+                <p class="app-detail-tagline" id="app-tagline"></p>
+                <!-- JS injects store buttons here -->
+                <div class="store-buttons-container" id="store-buttons"></div>
+            </div>
+        </header>
+
+        <div class="app-detail-body">
+            <div class="app-content-left">
+                <h2>Screenshots</h2>
+                <!-- JS injects images here -->
+                <div class="screenshots-gallery" id="app-screenshots"></div>
+
+                <h2 style="margin-top: 3rem;">About the App</h2>
+                <p id="app-desc" style="color: var(--text-muted);"></p>
+
+                <h3 style="margin-top: 2rem;">Features</h3>
+                <!-- JS injects lists here -->
+                <ul id="app-features" class="feature-list"></ul>
+            </div>
+
+            <aside class="app-sidebar">
+                <h3>Information</h3>
+                <div class="sidebar-info">
+                    <span class="label">Category</span>
+                    <strong id="app-category"></strong>
+
+                    <span class="label">Platforms</span>
+                    <strong id="app-platforms"></strong>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <script src="/site-config.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+
+/* =========================================================
+   NextCodeLab Privacy / Legal Page
+   Uses variables from ../style.css
+   ========================================================= */
+
+.legal-page {
+    padding: 3rem 0 5rem;
+}
+
+
+/* =========================================================
+   Document
+   ========================================================= */
+
+.legal-content {
+    max-width: 860px;
+    margin: 0 auto;
+
+    padding: 3.5rem;
+
+    background: var(--bg-surface);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.legal-header {
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+.legal-label {
+    display: inline-block;
+
+    margin-bottom: 0.75rem;
+
+    color: var(--accent);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.legal-header h1 {
+    margin: 0 0 0.75rem;
+
+    color: var(--text-main);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.legal-intro {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.legal-meta {
+    margin-top: 1.25rem;
+
+    color: var(--text-muted);
+
+    font-size: 0.8rem;
+}
+
+.legal-meta i {
+    margin-right: 0.35rem;
+
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   Sections
+   ========================================================= */
+
+.legal-section {
+    margin-bottom: 2.75rem;
+}
+
+.legal-section:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section h2 {
+    margin: 0 0 1rem;
+
+    color: var(--text-main);
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+.legal-section h3 {
+    margin: 1.75rem 0 0.75rem;
+
+    color: var(--text-main);
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.legal-section p {
+    margin: 0 0 1rem;
+
+    color: var(--text-muted);
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.legal-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   Lists
+   ========================================================= */
+
+.legal-section ul {
+    margin: 1rem 0 1.25rem;
+    padding-left: 1.5rem;
+
+    color: var(--text-muted);
+}
+
+.legal-section li {
+    margin-bottom: 0.55rem;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.legal-section li::marker {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   Links
+   ========================================================= */
+
+.legal-section a {
+    color: var(--accent);
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+.legal-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   External links
+   ========================================================= */
+
+.external-links {
+    list-style: none;
+
+    padding-left: 0 !important;
+}
+
+.external-links li {
+    margin-bottom: 0.75rem;
+
+    padding: 0.8rem 1rem;
+
+    background: var(--bg-surface-hover);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.external-links li::before {
+    content: "↗";
+
+    margin-right: 0.6rem;
+
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   Effective Date
+   ========================================================= */
+
+.policy-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+
+    background: var(--bg-surface-hover);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+
+    color: var(--text-muted);
+
+    font-size: 0.875rem;
+}
+
+.policy-date i {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   Contact Card
+   ========================================================= */
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+
+    background: var(--bg-surface-hover);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    color: white;
+}
+
+.contact-card span {
+    display: block;
+
+    margin-bottom: 0.2rem;
+
+    color: var(--text-muted);
+
+    font-size: 0.75rem;
+}
+
+.contact-card a {
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.legal-footer {
+    padding: 3rem 0;
+
+    border-top: 1px solid var(--border-color);
+
+    text-align: center;
+
+    color: var(--text-muted);
+}
+
+.legal-footer p {
+    margin: 0.25rem 0;
+}
+
+.legal-footer strong {
+    color: var(--text-main);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+
+    margin-top: 1.25rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+
+    font-size: 0.875rem;
+
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    margin-top: 1.25rem !important;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   Scroll To Top
+   ========================================================= */
+
+.scroll-top {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    background: var(--bg-surface);
+    color: var(--text-main);
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow: var(--shadow-md);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+
+    color: #fff;
+}
+
+.scroll-top i {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .legal-page {
+        padding: 1.5rem 0 3rem;
+    }
+
+    .legal-content {
+        padding: 2rem 1.5rem;
+
+        border-radius: var(--radius-md);
+    }
+
+    .legal-header {
+        margin-bottom: 2rem;
+    }
+
+    .legal-header h1 {
+        font-size: 2rem;
+    }
+
+    .legal-intro {
+        font-size: 0.95rem;
+    }
+
+    .legal-section {
+        margin-bottom: 2.25rem;
+    }
+
+    .legal-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .legal-section p,
+    .legal-section li {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================================
+   Small Phones
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .legal-page .container {
+        padding: 0;
+    }
+
+    .legal-content {
+        padding: 1.5rem 1rem;
+
+        border-left: 0;
+        border-right: 0;
+
+        border-radius: 0;
+    }
+
+    .legal-header {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    .legal-section p {
+        line-height: 1.75;
+    }
+
+    .contact-card {
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+    .scroll-top {
+        right: 14px;
+        bottom: 14px;
+
+        width: 36px;
+        height: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   Accessibility
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .scroll-top,
+    .legal-section a,
+    .footer-links a {
+        transition: none;
+    }
+
+}
