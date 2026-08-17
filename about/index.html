@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Details - NextCodeLab</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
-    <link rel="apple-touch-icon" href="/assets/icon.svg">
+
+    <title>About | NextCodeLab</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/privacy.css">
+    <link rel="stylesheet" href="/about/style.css">
 </head>
 
 <body>
+
     <nav class="navbar">
         <div class="container nav-content">
             <a href="/" class="brand">NextCodeLab</a>
@@ -28,43 +34,74 @@
         </div>
     </nav>
 
-    <main class="container" id="app-detail-container">
-        <header class="app-detail-header">
-            <img src="" id="app-icon" alt="App Icon" class="app-detail-icon">
-            <div class="app-detail-info">
-                <h1 id="app-title"></h1>
-                <p class="app-detail-tagline" id="app-tagline"></p>
-                <!-- JS injects store buttons here -->
-                <div class="store-buttons-container" id="store-buttons"></div>
-            </div>
-        </header>
 
-        <div class="app-detail-body">
-            <div class="app-content-left">
-                <h2>Screenshots</h2>
-                <!-- JS injects images here -->
-                <div class="screenshots-gallery" id="app-screenshots"></div>
+    <main>
 
-                <h2 style="margin-top: 3rem;">About the App</h2>
-                <p id="app-desc" style="color: var(--text-muted);"></p>
+        <section class="hero container">
 
-                <h3 style="margin-top: 2rem;">Features</h3>
-                <!-- JS injects lists here -->
-                <ul id="app-features" class="feature-list"></ul>
-            </div>
+            <h1>About <span data-site-name></span></h1>
 
-            <aside class="app-sidebar">
-                <h3>Information</h3>
-                <div class="sidebar-info">
-                    <span class="label">Category</span>
-                    <strong id="app-category"></strong>
+            <p data-company-description></p>
 
-                    <span class="label">Platforms</span>
-                    <strong id="app-platforms"></strong>
+        </section>
+
+
+        <section class="container about-content">
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    <img src="/assets/icon.svg" alt="NextCodeLab" loading="lazy">
                 </div>
-            </aside>
-        </div>
+
+                <h2 data-site-name></h2>
+
+                <p data-company-tagline></p>
+
+                <p data-company-description></p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h2>Our Applications</h2>
+
+                <p>
+                    We create practical applications and utilities
+                    designed to be useful in everyday life.
+                </p>
+
+                <p>
+                    Our applications are developed for multiple
+                    platforms, including Windows, Android, iOS,
+                    and the web.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h2>Get in Touch</h2>
+
+                <p>
+                    Have a question, suggestion, or feedback?
+                    We'd be happy to hear from you.
+                </p>
+
+                <a data-contact-email class="store-btn">
+                    <i class="fa fa-envelope"></i>
+                    Contact Us
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
+
+
     <footer class="footer">
         <div class="container footer-content">
 
@@ -176,10 +213,12 @@
         <i class="fa fa-angle-up"></i>
 
     </button>
+
+
     <script src="/site-config.js"></script>
-    <script src="/js/data.js"></script>
-    <script src="/js/legal.js"></script>
     <script src="/js/script.js"></script>
+    <script src="/js/legal.js"></script>
+
 </body>
 
 </html>

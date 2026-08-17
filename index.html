@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextCodeLab | Apps Built to be Useful</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+    <link rel="apple-touch-icon" href="/assets/icon.svg">
+
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -16,7 +20,7 @@
             <a href="index.html" class="brand">NextCodeLab</a>
             <div class="nav-links">
                 <a href="#apps">Apps</a>
-                <a href="#about">About</a>
+                <a href="/about/">About</a>
                 <button id="theme-toggle" class="btn-secondary btn" style="padding: 0.4rem 0.8rem;">🌙</button>
             </div>
         </div>
@@ -53,7 +57,7 @@
 
                 <a href="/" class="footer-logo">
 
-                    <img data-site-logo alt="" loading="lazy">
+                    <img src="/assets/icon.svg" alt="NextCodeLab" loading="lazy">
 
                     <span>
                         <strong data-site-name></strong>
@@ -75,14 +79,14 @@
                 <ul class="footer-links">
 
                     <li>
-                        <a data-contact-email>
+                        <a data-contact-email href="#">
                             <i class="fa fa-envelope"></i>
                             Contact Us
                         </a>
                     </li>
 
                     <li>
-                        <a data-site-website>
+                        <a data-site-website href="#">
                             <i class="fa fa-globe"></i>
                             Website
                         </a>
@@ -101,14 +105,14 @@
                 <ul class="footer-links">
 
                     <li>
-                        <a data-privacy-link>
+                        <a data-privacy-link href="/privacy/">
                             <i class="fa fa-shield"></i>
                             Privacy Policy
                         </a>
                     </li>
 
                     <li>
-                        <a data-terms-link>
+                        <a data-terms-link href="/terms/">
                             <i class="fa fa-file-text"></i>
                             Terms &amp; Conditions
                         </a>
@@ -138,8 +142,10 @@
 
             <p>
                 &copy;
-                <span data-copyright></span>
-                <strong data-site-name></strong>.
+                <a href="/" class="footer-company-link">
+                    <span data-copyright></span>
+                    <strong data-site-name></strong>
+                </a>.
                 All rights reserved.
             </p>
 
@@ -156,6 +162,7 @@
     </button>
 
     <!-- Shared JavaScript -->
+    <script src="/site-config.js"></script>
     <script src="/js/data.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/legal.js"></script>

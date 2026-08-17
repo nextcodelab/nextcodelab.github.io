@@ -330,132 +330,155 @@ a {
    ========================= */
 
 .footer {
-    margin-top: 5rem;
-    background: var(--bg-surface);
-    border-top: 1px solid var(--border-color);
+  margin-top: 5rem;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-    gap: 3rem;
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
 }
 
 .footer-column h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .footer-brand p,
 .footer-column p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    max-width: 320px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 320px;
 }
-
 
 /* Logo */
 
 .footer-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .footer-logo img {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    object-fit: cover;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .footer-logo span {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-logo strong {
-    font-size: 1.05rem;
+  font-size: 1.05rem;
 }
 
 .footer-logo small {
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: 2px;
 }
-
 
 /* Links */
 
 .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
-    margin-bottom: 0.7rem;
+  margin-bottom: 0.7rem;
 }
 
 .footer-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: var(--transition);
 }
 
 .footer-links a:hover {
-    color: var(--accent);
-    transform: translateX(2px);
+  color: var(--accent);
+  transform: translateX(2px);
 }
 
 .footer-links i {
-    width: 16px;
-    text-align: center;
+  width: 16px;
+  text-align: center;
 }
-
 
 /* Bottom */
 
 .footer-bottom {
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .footer-bottom p {
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    text-align: center;
-    margin: 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0;
 }
 
+/* Footer clickable content */
+
+.footer a {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.footer-logo {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.footer-logo strong,
+.footer-logo small {
+  cursor: pointer;
+}
+
+.footer-company-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.footer-company-link:hover {
+  color: var(--accent);
+}
 
 /* Mobile */
 
 @media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-top: 3rem;
-        padding-bottom: 2rem;
-    }
-
-    .footer-brand p,
-    .footer-column p {
-        max-width: none;
-    }
-
+  .footer-brand p,
+  .footer-column p {
+    max-width: none;
+  }
 }
-
 
 @media (max-width: 480px) {
   .scroll-top {
@@ -469,23 +492,6 @@ a {
     font-size: 14px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes fadeIn {
   from {

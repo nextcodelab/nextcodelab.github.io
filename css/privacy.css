@@ -1,4 +1,3 @@
-
 /* =========================================================
    NextCodeLab Privacy / Legal Page
    Uses variables from ../style.css
@@ -16,11 +15,9 @@
 .legal-content {
     max-width: 860px;
     margin: 0 auto;
-
     padding: 3.5rem;
 
     background: var(--bg-surface);
-
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
 
@@ -86,7 +83,6 @@
 
 .legal-meta i {
     margin-right: 0.35rem;
-
     color: var(--accent);
 }
 
@@ -180,7 +176,7 @@
 
 
 /* =========================================================
-   External links
+   External Links
    ========================================================= */
 
 .external-links {
@@ -191,13 +187,18 @@
 
 .external-links li {
     margin-bottom: 0.75rem;
-
     padding: 0.8rem 1rem;
 
     background: var(--bg-surface-hover);
 
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+
+    transition: var(--transition);
+}
+
+.external-links li:hover {
+    border-color: var(--accent);
 }
 
 .external-links li::before {
@@ -232,6 +233,7 @@
 }
 
 .policy-date i {
+    flex-shrink: 0;
     color: var(--accent);
 }
 
@@ -252,6 +254,12 @@
 
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    border-color: var(--accent);
 }
 
 .contact-icon {
@@ -267,8 +275,7 @@
     border-radius: 50%;
 
     background: var(--accent);
-
-    color: white;
+    color: #fff;
 }
 
 .contact-card span {
@@ -282,12 +289,20 @@
 }
 
 .contact-card a {
+    color: var(--accent);
+
     font-size: 0.95rem;
+
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
 }
 
 
 /* =========================================================
-   Footer
+   Legal Footer
    ========================================================= */
 
 .legal-footer {
@@ -308,28 +323,68 @@
     color: var(--text-main);
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.25rem;
 
-    margin-top: 1.25rem;
+/* =========================================================
+   Footer Links
+   Always Vertical
+   ========================================================= */
+
+.legal-footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.65rem;
+
+    margin: 1.25rem 0 0;
+    padding: 0;
+
+    list-style: none;
 }
 
-.footer-links a {
+.legal-footer .footer-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.legal-footer .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.45rem;
+
     color: var(--text-muted);
 
     font-size: 0.875rem;
+    font-weight: 500;
+
+    text-decoration: none;
 
     transition: var(--transition);
 }
 
-.footer-links a:hover {
+.legal-footer .footer-links a:hover {
     color: var(--accent);
 }
 
+.legal-footer .footer-links i {
+    width: 16px;
+
+    text-align: center;
+
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   Copyright
+   ========================================================= */
+
 .copyright {
-    margin-top: 1.25rem !important;
+    margin-top: 1.5rem !important;
+
+    color: var(--text-muted);
 
     font-size: 0.75rem;
 }
@@ -351,6 +406,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: 0;
 
     border: 1px solid var(--border-color);
     border-radius: 50%;
@@ -374,7 +431,8 @@
         visibility 0.2s ease,
         transform 0.2s ease,
         background-color 0.2s ease,
-        color 0.2s ease;
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .scroll-top.visible {
@@ -437,6 +495,9 @@
         font-size: 0.9rem;
     }
 
+    .contact-card {
+        align-items: flex-start;
+    }
 }
 
 
@@ -472,8 +533,8 @@
         align-items: flex-start;
     }
 
-    .footer-links {
-        flex-wrap: wrap;
+    .legal-footer .footer-links {
+        gap: 0.75rem;
     }
 
     .scroll-top {
@@ -483,7 +544,6 @@
         width: 36px;
         height: 36px;
     }
-
 }
 
 
@@ -495,8 +555,9 @@
 
     .scroll-top,
     .legal-section a,
-    .footer-links a {
+    .legal-footer .footer-links a,
+    .external-links li,
+    .contact-card {
         transition: none;
     }
-
 }
