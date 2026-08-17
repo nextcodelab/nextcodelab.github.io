@@ -123,6 +123,8 @@ function initAppPage() {
     buttonsHtml += `<a href="${app.googlePlay}" class="store-btn">▶️ Get it on Google Play</a>`;
   if (app.appStore)
     buttonsHtml += `<a href="${app.appStore}" class="store-btn">🍏 Download on App Store</a>`;
+  if (app.website)
+    buttonsHtml += `<a href="${app.website}" class="store-btn">🌐 Open Website</a>`;
   storeContainer.innerHTML = buttonsHtml;
 
   // Render Features
