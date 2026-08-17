@@ -1,6 +1,6 @@
 // script.js
 // Theme configuration
-const DARK_IS_PREFERRED = false;
+const DARK_IS_PREFERRED = true;
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
 
