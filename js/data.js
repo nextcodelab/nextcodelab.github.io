@@ -113,5 +113,63 @@ const appsData = [
 
     screenshots: [],
   },
+  {
+    id: "coder-basket",
+    name: "Coder Basket",
+    category: "Developer Tools",
+    tagline:
+      "Discover developer libraries, tools, frameworks and open source projects.",
+    description:
+      "Coder Basket is a developer-focused platform for discovering useful software libraries, development tools, frameworks, and open source projects.",
+
+    icon: "https://coderbasket.github.io/img/codericon.png",
+
+    platforms: ["Web"],
+
+    microsoftStore: "",
+    googlePlay: "",
+    appStore: "",
+
+    website: "https://coderbasket.github.io/",
+
+    features: [
+      "Discover developer tools and libraries",
+      "Explore open source projects",
+      "Browse frameworks and development technologies",
+      "Find useful software and developer resources",
+      "Works on desktop and mobile browsers",
+    ],
+
+    screenshots: [],
+  },
+  {
+    id: "text-to-speech",
+    name: "Text to Speech",
+    category: "Productivity",
+    tagline: "Convert text into natural-sounding speech and save audio files.",
+    description:
+      "Text to Speech is an app that converts written text into speech, supports multiple languages and voices, and lets you save generated audio for later playback.",
+
+    icon: "https://play-lh.googleusercontent.com/yRx9SsJtx1z0tUkMqu0AoW4qia5C_In3cy3evZkrIxx28kKD7idimHUn8lgRncp3LZ_biVkR8cC6ZCr4fvOnIg=w480-h960-rw",
+
+    platforms: ["Windows", "Android"],
+
+    microsoftStore: "https://apps.microsoft.com/detail/9pmv6wxsdhjp",
+    googlePlay:
+      "https://play.google.com/store/apps/details?id=com.nextcodelab.text_to_speech",
+    appStore: "",
+
+    website: null,
+
+    features: [
+      "Convert text to speech",
+      "Support for multiple languages and voices",
+      "Save generated audio files",
+      "Customize voice and playback options",
+      "Available on Windows and Android",
+    ],
+
+    screenshots: [],
+  },
   // Add up to 50+ apps here easily
 ];
