@@ -1,0 +1,361 @@
+/* =========================================================
+   APP DETAILS - RESPONSIVE OVERRIDES
+   Add this at the END of /css/style.css
+   ========================================================= */
+
+/* Prevent horizontal overflow */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* -------------------------
+   App Details - Desktop
+   ------------------------- */
+
+.app-detail-header {
+  width: 100%;
+}
+
+.app-detail-body {
+  min-width: 0;
+}
+
+.app-content-left {
+  min-width: 0;
+}
+
+/* Screenshot gallery */
+.screenshots-gallery {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0;
+  scrollbar-width: thin;
+}
+
+/* Keep screenshots from becoming ridiculously large */
+.screenshot {
+  display: block;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  flex: 0 0 auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .app-detail-header {
+    gap: 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .app-detail-icon {
+    width: 108px;
+    height: 108px;
+  }
+
+  .app-detail-info h1 {
+    font-size: 2.1rem;
+  }
+
+  .app-detail-tagline {
+    font-size: 1.1rem;
+  }
+
+  .app-detail-body {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .app-sidebar {
+    width: 100%;
+  }
+
+  .screenshot {
+    height: 340px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0.8rem 0;
+  }
+
+  .nav-content {
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* App header becomes vertical */
+  .app-detail-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 2rem 0 2.5rem;
+  }
+
+  .app-detail-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+  }
+
+  .app-detail-info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .app-detail-info h1 {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .app-detail-tagline {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Store buttons */
+  .store-buttons-container {
+    width: 100%;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .store-btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  /* Body becomes single column */
+  .app-detail-body {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .app-content-left {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .app-content-left h2 {
+    font-size: 1.35rem;
+  }
+
+  /* =====================================================
+     MOBILE SCREENSHOTS
+     Stack screenshots vertically
+     ===================================================== */
+
+  .screenshots-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 0.75rem 0;
+
+    /* Important: remove horizontal scrolling */
+    overflow: visible;
+  }
+
+  .screenshot {
+    display: block;
+
+    /* Screenshot becomes responsive */
+    width: auto;
+    height: auto;
+
+    /* Never wider than the phone screen */
+    max-width: min(100%, 360px);
+
+    /* Let the image determine its own height */
+    max-height: none;
+
+    flex: none;
+
+    border-radius: 12px;
+  }
+
+  /* About section */
+  #app-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .feature-list {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding-left: 1.25rem;
+  }
+
+  /* Sidebar */
+  .app-sidebar {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .sidebar-info .label {
+    margin-top: 0.85rem;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .nav-content {
+    align-items: center;
+  }
+
+  .brand {
+    font-size: 1.05rem;
+  }
+
+  .nav-links {
+    gap: 0.55rem;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .nav-links .btn {
+    padding: 0.35rem 0.55rem !important;
+  }
+
+  .app-detail-header {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .app-detail-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+  }
+
+  .app-detail-info h1 {
+    font-size: 1.7rem;
+  }
+
+  .app-detail-tagline {
+    font-size: 0.92rem;
+  }
+
+  .store-buttons-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .store-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Smaller screenshots on narrow phones */
+  .screenshot {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .app-content-left h2 {
+    font-size: 1.25rem;
+  }
+
+  .app-sidebar {
+    padding: 1rem;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .container {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .screenshot {
+    max-width: 300px;
+  }
+
+  .app-detail-info h1 {
+    font-size: 1.55rem;
+  }
+}
+@media (max-width: 768px) {
+  .store-buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+
+  .store-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
