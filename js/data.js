@@ -3,9 +3,9 @@ const appsData = [
   {
     id: "shepherd-bible",
     name: "Shepherd Bible",
-    tagline: "A fast, lightweight Bible for daily study.",
+    tagline: "A simple, powerful Bible app for reading and study.",
     description:
-      "A fast and lightweight offline Bible for daily study. Quickly find Bible verses, read without an internet connection, listen to Bible audio, highlight and bookmark verses, create personal notebooks, explore cross-references, and study with concordance, Hebrew, and Greek tools.",
+      "Read and study the Bible offline with a fast, easy-to-use experience. Shepherd Bible lets you search Scripture, listen to Bible audio, highlight and bookmark verses, create personal notes and notebooks, explore cross-references, and use concordance tools with Hebrew and Greek support.",
     category: "Bible",
     icon: "https://store-images.s-microsoft.com/image/apps.24704.14323172057173048.f2d975bd-f26a-4749-b409-d6f4762f27b2.958f411e-da41-45f4-9f9d-5327b0ea614f?h=170",
     platforms: ["Windows"],
@@ -27,12 +27,13 @@ const appsData = [
       "https://store-images.s-microsoft.com/image/apps.28117.14323172057173048.a0945940-bf00-412a-898e-90c261c8b196.c2cdea1d-3c46-4278-a232-2f0ed609cf56",
     ],
   },
+
   {
     id: "english-dictionary-offline",
     name: "English Dictionary - Offline",
-    tagline: "A fast and powerful offline English dictionary.",
+    tagline: "A complete English dictionary that works without the internet.",
     description:
-      "A free offline English dictionary with definitions, synonyms, related words, pronunciation, examples, and powerful word search tools. Everything works offline without requiring additional downloads.",
+      "Look up words quickly with definitions, synonyms, pronunciations, examples, related words, and more. The dictionary works completely offline, making it useful for learning, writing, studying, and everyday word searches without needing an internet connection.",
     category: "Utilities",
     icon: "https://play-lh.googleusercontent.com/RVudXjLk1jrG98nx_rbHNDdGnGRDQnSjvWJKfGiz-GIilIeOyp6qxznluhM_16NwoSw5k9QMyrDfbvTAp5Dz=w480-h960-rw",
     platforms: ["Windows", "Android"],
@@ -57,14 +58,14 @@ const appsData = [
       "https://play-lh.googleusercontent.com/kWFt93pa8UEOsTL0zDGXN56LZtp74pgEtkRCiaLFk0S09r4grcYibjeuWmzdtwRKWdvrZ03Yb3G1dVDq1iSwVQ=w5120-h2880-rw",
     ],
   },
+
   {
     id: "battery-alarm-analytics",
     name: "Battery Alarm & Analytics",
     category: "Utilities",
-    tagline:
-      "Monitor your battery and get notified when it reaches your desired level.",
+    tagline: "Keep an eye on your battery and know when it needs attention.",
     description:
-      "Battery Alarm & Analytics is a Windows utility for monitoring battery status, analyzing battery information, and receiving battery level notifications.",
+      "A handy Windows battery utility that helps you monitor your battery level and status. Get notifications when your battery reaches your preferred level and quickly check useful battery information from one place.",
 
     icon: "https://store-images.s-microsoft.com/image/apps.10089.13964761162974245.4ae7b5a9-0965-41a3-a63f-757a219eecf9.c85c75f2-1a24-4afa-b471-66e9df62e1ec?h=170",
 
@@ -86,13 +87,14 @@ const appsData = [
       "https://store-images.s-microsoft.com/image/apps.61362.13964761162974245.1b859f71-0494-40c5-aa14-55806c2b1b2e.33916860-b013-4645-b178-09a24a4fd470",
     ],
   },
+
   {
     id: "word-puzzle-center",
     name: "Word Puzzle Center",
     category: "Utilities",
-    tagline: "Play fun and challenging word puzzles online.",
+    tagline: "Enjoy fun word puzzles anytime, right in your browser.",
     description:
-      "Word Puzzle Center is a collection of word puzzle games designed for quick, enjoyable play directly in your web browser.",
+      "Play a collection of fun and challenging word puzzle games directly in your web browser. No installation is required, and the games are designed to work comfortably on both desktop and mobile devices.",
 
     icon: "https://wordpuzzlecenter-github-io.wordpuzzles.workers.dev/icons/icon-192.png",
 
@@ -113,14 +115,14 @@ const appsData = [
 
     screenshots: [],
   },
+
   {
     id: "coder-basket",
     name: "Coder Basket",
     category: "Developer Tools",
-    tagline:
-      "Discover developer libraries, tools, frameworks and open source projects.",
+    tagline: "Find useful developer tools, libraries, frameworks, and open source projects.",
     description:
-      "Coder Basket is a developer-focused platform for discovering useful software libraries, development tools, frameworks, and open source projects.",
+      "A developer-focused collection for discovering useful libraries, development tools, frameworks, and open source projects. Browse technologies and projects in one place to find resources that can help with your next software project.",
 
     icon: "https://coderbasket.github.io/img/codericon.png",
 
@@ -142,13 +144,14 @@ const appsData = [
 
     screenshots: [],
   },
+
   {
     id: "text-to-speech",
     name: "Text to Speech",
     category: "Productivity",
-    tagline: "Convert text into natural-sounding speech and save audio files.",
+    tagline: "Turn written text into natural-sounding speech with ease.",
     description:
-      "Text to Speech is an app that converts written text into speech, supports multiple languages and voices, and lets you save generated audio for later playback.",
+      "Convert written text into speech using a variety of languages and voices. Customize your voice and playback options, then save generated audio files for listening later. Available for Windows and Android.",
 
     icon: "https://play-lh.googleusercontent.com/yRx9SsJtx1z0tUkMqu0AoW4qia5C_In3cy3evZkrIxx28kKD7idimHUn8lgRncp3LZ_biVkR8cC6ZCr4fvOnIg=w480-h960-rw",
 
@@ -171,5 +174,6 @@ const appsData = [
 
     screenshots: [],
   },
+
   // Add up to 50+ apps here easily
 ];
