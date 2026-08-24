@@ -14,6 +14,10 @@
                 href: "/services/"
             },
             {
+                label: "Play",
+                href: "/play/"
+            },
+            {
                 label: "About",
                 href: "/about/"
             }
@@ -32,34 +36,74 @@
         nav.className = "navbar";
 
 
-        const container = document.createElement("div");
+        const container =
+            document.createElement("div");
 
-        container.className = "container nav-content";
+        container.className =
+            "container nav-content";
 
 
-        /* Brand */
+        /* =================================================
+           BRAND
+           ================================================= */
 
-        const brand = document.createElement("a");
+        const brand =
+            document.createElement("a");
 
         brand.className = "brand";
         brand.href = "/";
-
         brand.textContent = config.brand;
 
 
-        /* Links */
+        /* =================================================
+           MOBILE MENU BUTTON
+           ================================================= */
 
-        const navLinks = document.createElement("div");
+        const menuButton =
+            document.createElement("button");
+
+        menuButton.className =
+            "mobile-menu-button";
+
+        menuButton.type = "button";
+
+        menuButton.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuButton.innerHTML = `
+            <span></span>
+            <span></span>
+            <span></span>
+        `;
+
+
+        /* =================================================
+           NAV LINKS
+           ================================================= */
+
+        const navLinks =
+            document.createElement("div");
 
         navLinks.className = "nav-links";
 
 
         config.links.forEach(item => {
 
-            const link = document.createElement("a");
+            const link =
+                document.createElement("a");
 
             link.href = item.href;
-            link.textContent = item.label;
+
+            link.textContent =
+                item.label;
+
 
             if (isCurrentPage(item.href)) {
 
@@ -69,24 +113,45 @@
                     "aria-current",
                     "page"
                 );
+
             }
+
+
+            /*
+             * Close mobile menu after selecting
+             * a navigation item.
+             */
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    closeMobileMenu();
+
+                }
+            );
+
 
             navLinks.appendChild(link);
 
         });
 
 
-        /* Theme button */
+        /* =================================================
+           THEME BUTTON
+           ================================================= */
 
         const themeButton =
             document.createElement("button");
 
-        themeButton.id = "theme-toggle";
+        themeButton.id =
+            "theme-toggle";
 
         themeButton.className =
             "btn-secondary btn theme-toggle";
 
-        themeButton.type = "button";
+        themeButton.type =
+            "button";
 
         themeButton.setAttribute(
             "aria-label",
@@ -94,26 +159,188 @@
         );
 
 
-        navLinks.appendChild(themeButton);
+        navLinks.appendChild(
+            themeButton
+        );
 
 
-        /* Build */
+        /* =================================================
+           BUILD
+           ================================================= */
 
-        container.appendChild(brand);
-        container.appendChild(navLinks);
+        container.appendChild(
+            brand
+        );
 
-        nav.appendChild(container);
+        container.appendChild(
+            menuButton
+        );
+
+        container.appendChild(
+            navLinks
+        );
+
+        nav.appendChild(
+            container
+        );
 
 
         /*
-         * INSERT AS FIRST ELEMENT
-         * INSIDE BODY
+         * Insert navbar as the first
+         * element inside body.
          */
 
         document.body.prepend(nav);
 
 
+        /* =================================================
+           EVENTS
+           ================================================= */
+
+        menuButton.addEventListener(
+            "click",
+            () => {
+
+                const isOpen =
+                    nav.classList.contains(
+                        "menu-open"
+                    );
+
+
+                if (isOpen) {
+
+                    closeMobileMenu();
+
+                } else {
+
+                    openMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /*
+         * Close menu when clicking outside.
+         */
+
+        document.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    !nav.contains(
+                        event.target
+                    )
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /*
+         * Close menu when resizing
+         * back to desktop.
+         */
+
+        window.addEventListener(
+            "resize",
+            () => {
+
+                if (
+                    window.innerWidth > 700
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
         initializeTheme();
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+       ===================================================== */
+
+    function openMobileMenu() {
+
+        const nav =
+            document.querySelector(
+                ".navbar"
+            );
+
+        const button =
+            document.querySelector(
+                ".mobile-menu-button"
+            );
+
+
+        if (!nav || !button) {
+            return;
+        }
+
+
+        nav.classList.add(
+            "menu-open"
+        );
+
+
+        button.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        button.setAttribute(
+            "aria-label",
+            "Close navigation menu"
+        );
+
+    }
+
+
+    function closeMobileMenu() {
+
+        const nav =
+            document.querySelector(
+                ".navbar"
+            );
+
+        const button =
+            document.querySelector(
+                ".mobile-menu-button"
+            );
+
+
+        if (!nav || !button) {
+            return;
+        }
+
+
+        nav.classList.remove(
+            "menu-open"
+        );
+
+
+        button.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        button.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
     }
 
 
@@ -139,11 +366,16 @@
 
         path = path
             .toLowerCase()
-            .replace(/\/index\.html$/, "/");
+            .replace(
+                /\/index\.html$/,
+                "/"
+            );
 
 
         if (!path.endsWith("/")) {
+
             path += "/";
+
         }
 
 
@@ -192,6 +424,7 @@
             "click",
             toggleTheme
         );
+
     }
 
 
@@ -228,10 +461,12 @@
                 "nextcodelab-theme",
                 "dark"
             );
+
         }
 
 
         updateThemeButton();
+
     }
 
 
@@ -265,7 +500,10 @@
        START
        ===================================================== */
 
-    if (document.readyState === "loading") {
+    if (
+        document.readyState ===
+        "loading"
+    ) {
 
         document.addEventListener(
             "DOMContentLoaded",
