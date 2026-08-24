@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Build Your Idea | NextCodeLab</title>
+
+    <meta
+        name="description"
+        content="Tell NextCodeLab about your software idea and turn it into a real application."
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./idea.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <main class="idea-page">
+
+        <!-- HERO -->
+
+        <section class="idea-hero">
+
+            <div class="idea-badge">
+                <span></span>
+                PROJECT BUILDER
+            </div>
+
+            <h1>
+                Let's turn your
+                <span>idea into software.</span>
+            </h1>
+
+            <p>
+                You don't need a complete specification.
+                Tell me what you have in mind and I'll help
+                shape it into a real software project.
+            </p>
+
+        </section>
+
+
+        <!-- FORM -->
+
+        <section class="idea-layout">
+
+            <form
+                id="project-form"
+                class="project-form"
+                novalidate
+            >
+
+                <!-- STEP 1 -->
+
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div>
+                            <span>YOUR IDEA</span>
+
+                            <h2>
+                                What are you building?
+                            </h2>
+
+                            <p>
+                                Start with the basics. You can change
+                                everything later.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="project-name">
+                            Project name
+                        </label>
+
+                        <input
+                            id="project-name"
+                            name="projectName"
+                            type="text"
+                            placeholder="e.g. Smart Inventory Manager"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <div class="label-row">
+
+                            <label for="description">
+                                Describe your idea
+                            </label>
+
+                            <button
+                                type="button"
+                                id="ai-generate"
+                                class="ai-button"
+                            >
+                                ✨ Help me describe it
+                            </button>
+
+                        </div>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="6"
+                            placeholder="Tell me what you want the software to do..."
+                        ></textarea>
+
+                        <div class="field-hint">
+                            Don't worry about technical details.
+                            Explain it in your own words.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div>
+                            <span>PLATFORM</span>
+
+                            <h2>
+                                Where should it work?
+                            </h2>
+
+                            <p>
+                                Select one or more platforms.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="platform-grid">
+
+                        <label class="platform-card">
+
+                            <input
+                                type="checkbox"
+                                name="platform"
+                                value="Windows"
+                            >
+
+                            <span class="platform-icon">
+                                ▦
+                            </span>
+
+                            <strong>Windows</strong>
+
+                            <small>
+                                Desktop
+                            </small>
+
+                        </label>
+
+
+                        <label class="platform-card">
+
+                            <input
+                                type="checkbox"
+                                name="platform"
+                                value="Android"
+                            >
+
+                            <span class="platform-icon">
+                                ◉
+                            </span>
+
+                            <strong>Android</strong>
+
+                            <small>
+                                Mobile
+                            </small>
+
+                        </label>
+
+
+                        <label class="platform-card">
+
+                            <input
+                                type="checkbox"
+                                name="platform"
+                                value="iOS"
+                            >
+
+                            <span class="platform-icon">
+                                
+                            </span>
+
+                            <strong>iOS</strong>
+
+                            <small>
+                                Mobile
+                            </small>
+
+                        </label>
+
+
+                        <label class="platform-card">
+
+                            <input
+                                type="checkbox"
+                                name="platform"
+                                value="Web"
+                            >
+
+                            <span class="platform-icon">
+                                ◌
+                            </span>
+
+                            <strong>Web</strong>
+
+                            <small>
+                                Browser
+                            </small>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div>
+                            <span>FEATURES</span>
+
+                            <h2>
+                                What should it do?
+                            </h2>
+
+                            <p>
+                                Add the features you already have in mind.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="feature-chips"
+                        class="feature-chips"
+                    >
+
+                        <button
+                            type="button"
+                            class="feature-chip"
+                            data-feature="User accounts"
+                        >
+                            User accounts
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feature-chip"
+                            data-feature="Dashboard"
+                        >
+                            Dashboard
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feature-chip"
+                            data-feature="Notifications"
+                        >
+                            Notifications
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feature-chip"
+                            data-feature="Reports"
+                        >
+                            Reports
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feature-chip"
+                            data-feature="Payments"
+                        >
+                            Payments
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feature-chip"
+                            data-feature="Search"
+                        >
+                            Search
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feature-chip"
+                            data-feature="AI features"
+                        >
+                            AI features
+                        </button>
+
+                        <button
+                            type="button"
+                            class="feature-chip"
+                            data-feature="Data export"
+                        >
+                            Data export
+                        </button>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="custom-features">
+                            Other features
+                        </label>
+
+                        <textarea
+                            id="custom-features"
+                            name="customFeatures"
+                            rows="4"
+                            placeholder="Anything else you want the software to do..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <div>
+                            <span>PROJECT DETAILS</span>
+
+                            <h2>
+                                Tell me a little more.
+                            </h2>
+
+                            <p>
+                                These fields are optional but helpful.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="two-column">
+
+                        <div class="field">
+
+                            <label for="budget">
+                                Budget
+                            </label>
+
+                            <select
+                                id="budget"
+                                name="budget"
+                            >
+
+                                <option value="">
+                                    Select a range
+                                </option>
+
+                                <option>
+                                    Not sure yet
+                                </option>
+
+                                <option>
+                                    Under $500
+                                </option>
+
+                                <option>
+                                    $500 – $1,500
+                                </option>
+
+                                <option>
+                                    $1,500 – $5,000
+                                </option>
+
+                                <option>
+                                    $5,000+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="timeline">
+                                Desired timeline
+                            </label>
+
+                            <select
+                                id="timeline"
+                                name="timeline"
+                            >
+
+                                <option value="">
+                                    Select a timeline
+                                </option>
+
+                                <option>
+                                    No fixed deadline
+                                </option>
+
+                                <option>
+                                    Less than 1 month
+                                </option>
+
+                                <option>
+                                    1 – 3 months
+                                </option>
+
+                                <option>
+                                    3 – 6 months
+                                </option>
+
+                                <option>
+                                    6+ months
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="target-users">
+                            Who will use it?
+                        </label>
+
+                        <input
+                            id="target-users"
+                            name="targetUsers"
+                            type="text"
+                            placeholder="e.g. Small businesses, developers, students..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 5 -->
+
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <div class="step-number">
+                            05
+                        </div>
+
+                        <div>
+                            <span>CONTACT</span>
+
+                            <h2>
+                                Where can I reach you?
+                            </h2>
+
+                            <p>
+                                I'll use this email to reply to your project request.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="email">
+                            Your email
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="notes">
+                            Additional notes
+                        </label>
+
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            rows="5"
+                            placeholder="Anything else I should know?"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="submit-area">
+
+                    <div class="submit-info">
+
+                        <span class="submit-icon">
+                            ✓
+                        </span>
+
+                        <div>
+                            <strong>
+                                Ready to build?
+                            </strong>
+
+                            <p>
+                                Your email app will open with
+                                your project request prepared.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+
+                        <span>
+                            Build My Project Request
+                        </span>
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M5 12h14"/>
+                            <path d="m13 6 6 6-6 6"/>
+                        </svg>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- PREVIEW -->
+
+            <aside class="project-preview">
+
+                <div class="preview-sticky">
+
+                    <div class="preview-label">
+                        PROJECT PREVIEW
+                    </div>
+
+                    <div class="preview-card">
+
+                        <div class="preview-header">
+
+                            <div class="preview-logo">
+                                N
+                            </div>
+
+                            <div>
+                                <strong>
+                                    NextCodeLab
+                                </strong>
+
+                                <span>
+                                    Software Project
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="preview-divider"></div>
+
+
+                        <div class="preview-project-name">
+                            <small>
+                                PROJECT
+                            </small>
+
+                            <h3 id="preview-name">
+                                Your project name
+                            </h3>
+                        </div>
+
+
+                        <div class="preview-block">
+
+                            <small>
+                                DESCRIPTION
+                            </small>
+
+                            <p id="preview-description">
+                                Your project description will appear here.
+                            </p>
+
+                        </div>
+
+
+                        <div class="preview-block">
+
+                            <small>
+                                PLATFORM
+                            </small>
+
+                            <div
+                                id="preview-platforms"
+                                class="preview-tags"
+                            >
+                                <span>
+                                    Not selected
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="preview-block">
+
+                            <small>
+                                FEATURES
+                            </small>
+
+                            <div
+                                id="preview-features"
+                                class="preview-tags"
+                            >
+                                <span>
+                                    No features selected
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="preview-footer">
+
+                            <span>
+                                PROJECT REQUEST
+                            </span>
+
+                            <strong>
+                                NextCodeLab
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <script src="../../js/header.js"></script>
+
+    <script src="./idea.js"></script>
+
+</body>
+</html>
+

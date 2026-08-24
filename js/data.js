@@ -120,7 +120,8 @@ const appsData = [
     id: "coder-basket",
     name: "Coder Basket",
     category: "Developer Tools",
-    tagline: "Find useful developer tools, libraries, frameworks, and open source projects.",
+    tagline:
+      "Find useful developer tools, libraries, frameworks, and open source projects.",
     description:
       "A developer-focused collection for discovering useful libraries, development tools, frameworks, and open source projects. Browse technologies and projects in one place to find resources that can help with your next software project.",
 
@@ -174,6 +175,40 @@ const appsData = [
 
     screenshots: [],
   },
+  {
+    id: "xaml-path-icons",
+    name: "XAML Path Icons",
+    category: "Developer Tools",
+    tagline:
+      "Create, browse, and export vector icons for XAML, SVG, and Android Drawable.",
 
-  // Add up to 50+ apps here easily
+    description:
+      "Browse and work with vector icons designed for modern application development. Export icons as XAML Path data for WPF and other XAML-based applications, save them as SVG files, or use them as Android Drawable resources. A practical tool for developers who need reusable vector graphics across Windows, Android, and other platforms.",
+
+    icon: "https://store-images.s-microsoft.com/image/apps.30327.13811465872225312.e32f0ffa-7415-4f6e-8afb-b07a9820d839.5534afad-7d3c-4c50-8d45-256ca96378f5?h=170",
+
+    platforms: ["Windows"],
+
+    microsoftStore: "https://apps.microsoft.com/detail/9mtbnqsz9nz9",
+
+    googlePlay: "",
+
+    appStore: "",
+
+    website: null,
+
+    features: [
+      "Collection of XAML Path icons",
+      "Designed for XAML and WPF applications",
+      "Vector-based icons",
+      "Easy to use in Windows application interfaces",
+      "Developer-focused icon resource",
+    ],
+
+    screenshots: [
+      "https://store-images.s-microsoft.com/image/apps.51626.13811465872225312.e32f0ffa-7415-4f6e-8afb-b07a9820d839.2310903b-b7cb-4690-979f-bb2287ef8b8a"
+    ],
+  },
+
+ 
 ];
