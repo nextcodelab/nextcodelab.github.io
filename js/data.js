@@ -125,7 +125,7 @@ const appsData = [
     description:
       "A developer-focused collection for discovering useful libraries, development tools, frameworks, and open source projects. Browse technologies and projects in one place to find resources that can help with your next software project.",
 
-    icon: "https://coderbasket.github.io/img/codericon.png",
+    icon: "https://coderbasket.github.io/assets/icon.svg",
 
     platforms: ["Web"],
 
