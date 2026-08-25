@@ -2,7 +2,7 @@ const webApps = [
   {
     title: "A4 to A5 PDF Converter",
     description: "Convert 2 A4 pages into 1 A5 page",
-    icon: "/assets/apps/a4-a5.png",
+    icon: "/assets/apps/a4-a5.svg",
     path: "/apps/pdf/",
   },
 
