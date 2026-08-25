@@ -19,6 +19,13 @@ const webApps = [
     icon: "/assets/apps/md.svg",
     path: "/apps/md/",
   },
+  {
+    title: "HTML Editor",
+    description:
+      "Fast, real-time HTML editing and previewing right in your browser.",
+    icon: "/assets/apps/html.svg",
+    path: "/apps/editor/",
+  },
   //     {
   //         title: "Word Counter",
   //         description: "Count words and characters",
