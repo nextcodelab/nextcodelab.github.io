@@ -6,12 +6,12 @@ const webApps = [
     path: "/apps/pdf/",
   },
 
-  //     {
-  //         title: "Image Compressor",
-  //         description: "Compress images quickly",
-  //         icon: "/assets/apps/image-compressor.svg",
-  //         path: "/image-compressor/"
-  //     },
+      {
+          title: "Web Notes",
+          description: "Taking notes quickly",
+          icon: "/assets/apps/notes.svg",
+          path: "/apps/notes/"
+      },
 
   //     {
   //         title: "Word Counter",

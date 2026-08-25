@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Soft Drop Shadow -->
+    <filter id="dropShadow" x="40" y="40" width="432" height="440" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.15" />
+    </filter>
+
+    <!-- Pencil Shadow -->
+    <filter id="pencilShadow" x="200" y="100" width="250" height="280" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="-4" dy="12" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.2" />
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="coverGradient" x1="80" y1="60" x2="380" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+
+    <linearGradient id="pencilBody" x1="-25" y1="0" x2="25" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <linearGradient id="eraserGradient" x1="0" y1="-235" x2="0" y2="-210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FB7185" />
+      <stop offset="100%" stop-color="#E11D48" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main Container Group with Drop Shadow -->
+  <g filter="url(#dropShadow)">
+    
+    <!-- 1. Notebook Back Cover -->
+    <rect x="75" y="55" width="310" height="390" rx="28" fill="url(#coverGradient)" />
+
+    <!-- 2. White Paper Sheet -->
+    <rect x="105" y="75" width="280" height="350" rx="20" fill="#FFFFFF" />
+
+    <!-- Paper Subtle Inner Edge Shadow -->
+    <rect x="105" y="75" width="280" height="350" rx="20" fill="#000000" fill-opacity="0.02" />
+
+    <!-- 3. Spiral Binding Rings -->
+    <g fill="#94A3B8">
+      <!-- Ring 1 -->
+      <rect x="60" y="105" width="36" height="14" rx="7" fill="#CBD5E1" />
+      <rect x="60" y="107" width="36" height="10" rx="5" fill="#94A3B8" />
+      <!-- Ring 2 -->
+      <rect x="60" y="165" width="36" height="14" rx="7" fill="#CBD5E1" />
+      <rect x="60" y="167" width="36" height="10" rx="5" fill="#94A3B8" />
+      <!-- Ring 3 -->
+      <rect x="60" y="225" width="36" height="14" rx="7" fill="#CBD5E1" />
+      <rect x="60" y="227" width="36" height="10" rx="5" fill="#94A3B8" />
+      <!-- Ring 4 -->
+      <rect x="60" y="285" width="36" height="14" rx="7" fill="#CBD5E1" />
+      <rect x="60" y="287" width="36" height="10" rx="5" fill="#94A3B8" />
+      <!-- Ring 5 -->
+      <rect x="60" y="345" width="36" height="14" rx="7" fill="#CBD5E1" />
+      <rect x="60" y="347" width="36" height="10" rx="5" fill="#94A3B8" />
+    </g>
+
+    <!-- 4. Note Content (Bullets, Lines & Active Writing) -->
+    <!-- Line 1: Header / Title Line -->
+    <rect x="145" y="120" width="140" height="14" rx="7" fill="#6366F1" />
+
+    <!-- Line 2: Bullet 1 -->
+    <circle cx="152" cy="175" r="7" fill="#10B981" />
+    <rect x="175" y="169" width="170" height="12" rx="6" fill="#E2E8F0" />
+
+    <!-- Line 3: Bullet 2 -->
+    <circle cx="152" cy="225" r="7" fill="#3B82F6" />
+    <rect x="175" y="219" width="185" height="12" rx="6" fill="#E2E8F0" />
+
+    <!-- Line 4: Bullet 3 -->
+    <circle cx="152" cy="275" r="7" fill="#F59E0B" />
+    <rect x="175" y="269" width="130" height="12" rx="6" fill="#E2E8F0" />
+
+    <!-- Line 5: Active Writing Line (Handwritten Effect) -->
+    <circle cx="152" cy="325" r="7" fill="#EC4899" />
+    <path d="M 175 325 C 200 320, 220 330, 245 325 C 260 322, 275 328, 290 325" stroke="#EC4899" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+    <!-- Sparkles / Ideas icons -->
+    <path d="M 335 115 L 339 123 L 347 127 L 339 131 L 335 139 L 331 131 L 323 127 L 331 123 Z" fill="#F59E0B" />
+  </g>
+
+  <!-- 5. Taking Notes Pencil (Positioned and Angled) -->
+  <g filter="url(#pencilShadow)" transform="translate(300, 310) rotate(-40)">
+    <!-- Graphite Lead Tip -->
+    <polygon points="0,0 12,-28 -12,-28" fill="#1E293B" />
+
+    <!-- Wood Sharpened Section -->
+    <polygon points="12,-28 22,-50 -22,-50 -12,-28" fill="#FDE68A" />
+
+    <!-- Pencil Main Body -->
+    <rect x="-22" y="-190" width="44" height="140" fill="url(#pencilBody)" />
+
+    <!-- Body Center Stripe Highlight -->
+    <rect x="-7" y="-190" width="14" height="140" fill="#F59E0B" opacity="0.6" />
+
+    <!-- Metal Ferrule Band -->
+    <rect x="-22" y="-210" width="44" height="20" rx="2" fill="#CBD5E1" />
+    <rect x="-22" y="-204" width="44" height="4" fill="#94A3B8" />
+
+    <!-- Pink Eraser -->
+    <path d="M -22 -210 C -22 -232, 22 -232, 22 -210 Z" fill="url(#eraserGradient)" />
+  </g>
+</svg>
