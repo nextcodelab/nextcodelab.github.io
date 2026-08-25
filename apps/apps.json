@@ -1,0 +1,118 @@
+{
+    "categories": {
+        "documents": {
+            "title": "Documents",
+            "icon": "📄",
+            "order": 1
+        },
+        "calculators": {
+            "title": "Calculators & Utilities",
+            "icon": "🧮",
+            "order": 2
+        },
+        "devtools": {
+            "title": "Developer Tools",
+            "icon": "🛠️",
+            "order": 3
+        },
+        "games": {
+            "title": "Games",
+            "icon": "🎮",
+            "order": 4
+        }
+    },
+
+    "apps": [
+        {
+            "name": "Text Notes",
+            "description": "Simple text notes application for your quick thoughts.",
+            "url": "notes/index.html",
+            "icon": "📝",
+            "category": "documents",
+            "rating": 4.8,
+            "keywords": [
+                "notes",
+                "text",
+                "writing",
+                "documents"
+            ]
+        },
+
+        {
+            "name": "PDF Convert to A5",
+            "description": "Smoothly view and read PDF files locally.",
+            "url": "pdf/index.html",
+            "icon": "📄",
+            "category": "documents",
+            "rating": 4.6,
+            "keywords": [
+                "pdf",
+                "viewer",
+                "document",
+                "reader"
+            ]
+        },
+
+        {
+            "name": "PDF Merge",
+            "description": "Combine multiple PDF documents effortlessly.",
+            "url": "pdf-merge/index.html",
+            "icon": "📑",
+            "category": "documents",
+            "rating": 4.7,
+            "keywords": [
+                "pdf",
+                "merge",
+                "combine",
+                "documents"
+            ]
+        },
+
+        {
+            "name": "Percentage Calculator",
+            "description": "Quickly calculate percentages and percentage changes.",
+            "url": "percentage/index.html",
+            "icon": "％",
+            "category": "calculators",
+            "rating": 4.8,
+            "keywords": [
+                "percentage",
+                "percent",
+                "calculator",
+                "math"
+            ]
+        },
+
+        {
+            "name": "JSON Formatter",
+            "description": "Format, validate, and beautify your JSON blocks.",
+            "url": "json/index.html",
+            "icon": "{}",
+            "iconClass": "ncl-code-icon",
+            "category": "devtools",
+            "rating": 4.9,
+            "keywords": [
+                "json",
+                "formatter",
+                "validator",
+                "developer",
+                "code"
+            ]
+        },
+
+        {
+            "name": "Word Search",
+            "description": "Find hidden words in a fun and challenging puzzle.",
+            "url": "word-search/index.html",
+            "icon": "🔤",
+            "category": "games",
+            "rating": 4.9,
+            "keywords": [
+                "word",
+                "search",
+                "puzzle",
+                "game"
+            ]
+        }
+    ]
+}

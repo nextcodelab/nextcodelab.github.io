@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-9045308343519031">
+    <title>PDF Pages - 2-Up PDF Converter</title>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+    <link rel="apple-touch-icon" href="/assets/icon.svg">
+
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/apps/header.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9045308343519031"
+        crossorigin="anonymous"></script>
+    <style>
+        :root {
+            /* Map this app's existing variables to global NextCodeLab colors */
+            --bg-color: var(--bg-base);
+            --card-bg: var(--bg-surface);
+
+            --primary-color: var(--accent);
+            --primary-hover: var(--accent);
+            --primary-disabled: color-mix(in srgb, var(--accent) 45%, var(--bg-surface));
+
+            --success-color: #16a34a;
+            --success-hover: #15803d;
+
+            --text-main: var(--text-main);
+            --text-muted: var(--text-muted);
+            --border-color: #3b82f6;
+
+            --error-color: #dc2626;
+
+            --radius: var(--radius-md);
+            --shadow: var(--shadow-md);
+        }
+
+        [data-theme="dark"] {
+            --text-main: white;
+            --border-color: #3b82f6;
+
+        }
+
+
+        /* =========================================================
+       EXISTING APP STYLES
+       Layout is intentionally unchanged
+    ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+
+            background-color: var(--bg-color);
+            color: var(--text-main);
+
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .card {
+            background: var(--card-bg);
+
+            border-radius: var(--radius);
+
+            padding: 32px;
+
+            box-shadow: var(--shadow);
+
+            border: 1px solid var(--border-color);
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+        .drop-zone {
+            border: 2px dashed var(--border-color);
+
+            border-radius: var(--radius);
+
+            padding: 28px 16px;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+
+            background-color: var(--bg-base);
+        }
+
+        .drop-zone:hover,
+        .drop-zone.dragover {
+            border-color: var(--primary-color);
+
+            background-color: var(--bg-surface-hover);
+        }
+
+        .drop-zone-text {
+            font-size: 0.95rem;
+
+            font-weight: 600;
+
+            color: var(--primary-color);
+        }
+
+        .drop-zone-subtext {
+            font-size: 0.8rem;
+
+            color: var(--text-muted);
+
+            margin-top: 4px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-info {
+            display: none;
+
+            background: var(--bg-base);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            padding: 12px 16px;
+        }
+
+        .file-name {
+            font-weight: 600;
+
+            font-size: 0.95rem;
+
+            color: var(--text-main);
+
+            word-break: break-all;
+        }
+
+        .file-details {
+            font-size: 0.85rem;
+
+            color: var(--text-muted);
+
+            margin-top: 2px;
+        }
+
+        .btn {
+            width: 100%;
+
+            padding: 14px 20px;
+
+            font-size: 1rem;
+
+            font-weight: 600;
+
+            border-radius: 8px;
+
+            border: none;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.1s ease;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+        }
+
+        .btn:active {
+            transform: scale(0.99);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+
+            color: #ffffff;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-primary:disabled {
+            background-color: var(--primary-disabled);
+
+            cursor: not-allowed;
+        }
+
+        .btn-success {
+            background-color: var(--success-color);
+
+            color: #ffffff;
+        }
+
+        .btn-success:hover {
+            background-color: var(--success-hover);
+        }
+
+        .status-container {
+            display: none;
+
+            text-align: center;
+
+            font-size: 0.9rem;
+
+            font-weight: 500;
+        }
+
+        .status-text {
+            color: var(--text-muted);
+        }
+
+        .status-text.error {
+            color: var(--error-color);
+        }
+
+        .status-text.success {
+            color: var(--success-color);
+        }
+
+        .privacy-notice {
+            text-align: center;
+
+            font-size: 0.8rem;
+
+            color: var(--text-muted);
+
+            margin-top: 20px;
+
+            line-height: 1.4;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>PDF Pages</h1>
+            <p>Put two PDF pages on one sheet.</p>
+        </div>
+
+        <div class="card">
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-zone-text">Select PDF File</div>
+                <div class="drop-zone-subtext">or drag and drop here</div>
+                <input type="file" id="fileInput" accept="application/pdf">
+            </div>
+
+            <div class="file-info" id="fileInfo">
+                <div class="file-name" id="fileName"></div>
+                <div class="file-details" id="fileDetails"></div>
+            </div>
+
+            <button id="convertBtn" class="btn btn-primary" disabled>Convert to A5</button>
+
+            <div class="status-container" id="statusContainer">
+                <span class="status-text" id="statusText"></span>
+            </div>
+
+            <a id="downloadLink" class="hidden" style="text-decoration: none;">
+                <button class="btn btn-success" type="button">Download PDF</button>
+            </a>
+        </div>
+
+        <div class="privacy-notice">
+            Your PDF is processed locally in your browser.<br>
+            Nothing is uploaded.
+        </div>
+    </div>
+
+    <script>
+        const { PDFDocument } = PDFLib;
+
+        // UI Elements
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const fileDetails = document.getElementById('fileDetails');
+        const convertBtn = document.getElementById('convertBtn');
+        const statusContainer = document.getElementById('statusContainer');
+        const statusText = document.getElementById('statusText');
+        const downloadLink = document.getElementById('downloadLink');
+
+        // State Variables
+        let currentFile = null;
+        let sourcePdfDoc = null;
+        let createdObjectUrl = null;
+
+        // Setup Drag and Drop
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                dropZone.classList.add('dragover');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                dropZone.classList.remove('dragover');
+            }, false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            const files = e.dataTransfer.files;
+            if (files.length > 0 && files[0].type === 'application/pdf') {
+                handleFileSelect(files[0]);
+            } else if (files.length > 0) {
+                showStatus('Please select a valid PDF file.', true);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileSelect(e.target.files[0]);
+            }
+        });
+
+        async function handleFileSelect(file) {
+            resetState();
+            currentFile = file;
+
+            fileName.textContent = file.name;
+            fileDetails.textContent = 'Loading PDF...';
+            fileInfo.style.display = 'block';
+
+            try {
+                const fileBuffer = await file.arrayBuffer();
+                // Load with ignoreEncryption to handle mild permission restrictions if possible
+                sourcePdfDoc = await PDFDocument.load(fileBuffer, { ignoreEncryption: true });
+
+                const pageCount = sourcePdfDoc.getPageCount();
+                fileDetails.textContent = `${pageCount} page${pageCount === 1 ? '' : 's'}`;
+                convertBtn.disabled = false;
+            } catch (err) {
+                console.error(err);
+                fileDetails.textContent = 'Failed to load PDF';
+                showStatus('Error reading PDF file. It may be encrypted or corrupted.', true);
+                convertBtn.disabled = true;
+            }
+        }
+
+        function resetState() {
+            if (createdObjectUrl) {
+                URL.revokeObjectURL(createdObjectUrl);
+                createdObjectUrl = null;
+            }
+            downloadLink.classList.add('hidden');
+            statusContainer.style.display = 'none';
+            statusText.textContent = '';
+            statusText.className = 'status-text';
+            convertBtn.disabled = true;
+        }
+
+        function showStatus(text, isError = false, isSuccess = false) {
+            statusContainer.style.display = 'block';
+            statusText.textContent = text;
+            statusText.className = 'status-text';
+            if (isError) statusText.classList.add('error');
+            if (isSuccess) statusText.classList.add('success');
+        }
+
+        convertBtn.addEventListener('click', async () => {
+            if (!sourcePdfDoc || !currentFile) return;
+
+            convertBtn.disabled = true;
+            showStatus('Converting PDF...');
+            downloadLink.classList.add('hidden');
+
+            // Use setTimeout to yield execution so status text updates in UI before heavy JS runs
+            setTimeout(async () => {
+                try {
+                    // Output dimensions: A4 Landscape
+                    const sheetWidth = 841.89;
+                    const sheetHeight = 595.28;
+                    const slotWidth = sheetWidth / 2;
+                    const slotHeight = sheetHeight;
+
+                    const outputPdf = await PDFDocument.create();
+                    const pageCount = sourcePdfDoc.getPageCount();
+
+                    // Embed all pages from the source PDF
+                    const pageIndices = Array.from({ length: pageCount }, (_, i) => i);
+                    const embeddedPages = await outputPdf.embedPages(sourcePdfDoc.getPages());
+
+                    for (let i = 0; i < pageCount; i += 2) {
+                        const outputPage = outputPdf.addPage([sheetWidth, sheetHeight]);
+
+                        // Process Left Slot (Page i)
+                        drawPageInSlot(outputPage, embeddedPages[i], 0, slotWidth, slotHeight);
+
+                        // Process Right Slot (Page i + 1) if present
+                        if (i + 1 < pageCount) {
+                            drawPageInSlot(outputPage, embeddedPages[i + 1], slotWidth, slotWidth, slotHeight);
+                        }
+                    }
+
+                    const pdfBytes = await outputPdf.save();
+                    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+
+                    if (createdObjectUrl) {
+                        URL.revokeObjectURL(createdObjectUrl);
+                    }
+                    createdObjectUrl = URL.createObjectURL(blob);
+
+                    // Generate output filename
+                    let outputFileName = 'converted-a5.pdf';
+                    if (currentFile.name.toLowerCase().endsWith('.pdf')) {
+                        outputFileName = currentFile.name.slice(0, -4) + '-a5.pdf';
+                    } else {
+                        outputFileName = currentFile.name + '-a5.pdf';
+                    }
+
+                    downloadLink.href = createdObjectUrl;
+                    downloadLink.download = outputFileName;
+                    downloadLink.classList.remove('hidden');
+
+                    showStatus('Conversion complete', false, true);
+                } catch (err) {
+                    console.error(err);
+                    showStatus('An error occurred during conversion.', true);
+                } finally {
+                    convertBtn.disabled = false;
+                }
+            }, 50);
+        });
+
+        function drawPageInSlot(outputPage, embeddedPage, slotX, slotWidth, slotHeight) {
+            const sourceWidth = embeddedPage.width;
+            const sourceHeight = embeddedPage.height;
+
+            // Calculate scale factors to fit page inside slot
+            const scaleX = slotWidth / sourceWidth;
+            const scaleY = slotHeight / sourceHeight;
+            const scale = Math.min(scaleX, scaleY);
+
+            const drawWidth = sourceWidth * scale;
+            const drawHeight = sourceHeight * scale;
+
+            // Center horizontally inside slot, and vertically on the sheet
+            const x = slotX + (slotWidth - drawWidth) / 2;
+            const y = (slotHeight - drawHeight) / 2;
+
+            outputPage.drawPage(embeddedPage, {
+                x,
+                y,
+                width: drawWidth,
+                height: drawHeight
+            });
+        }
+    </script>
+    <script src="/js/header.js"></script>
+</body>
+
+</html>

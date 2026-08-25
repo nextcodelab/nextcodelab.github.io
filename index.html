@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
+     <link rel="stylesheet" href="/css/webapps.css">
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js'
         data-cf-beacon='{"token": "6bbc1a3ecb334735a4137f1bf50463a0"}'>
@@ -25,17 +26,32 @@
 </head>
 
 <body>
-    
+
 
     <main>
         <header class="hero container">
-           <h5 class="hero-title">Useful Apps for Windows, Android, iOS & the Web</h1>
-            <p>
-                Apps made to be useful — a portfolio of high-quality applications
-                and utility tools designed for Windows, Android, iOS, and the web.
-            </p>
+            <h5 class="hero-title">Useful Apps for Windows, Android, iOS & the Web</h1>
+                <p>
+                    Apps made to be useful — a portfolio of high-quality applications
+                    and utility tools designed for Windows, Android, iOS, and the web.
+                </p>
         </header>
+        <section id="web-apps" class="container web-apps-section">
 
+            <div class="section-header">
+                <div>
+                    <h2>Web Apps</h2>
+                    <p class="section-subtitle">
+                        Simple tools that work directly in your browser.
+                    </p>
+                </div>
+            </div>
+
+            <!-- JavaScript injects Web Apps here -->
+            <div class="web-app-grid" id="web-app-grid">
+            </div>
+
+        </section>
         <section id="apps" class="container">
             <div class="section-header">
                 <h2>All Applications</h2>
@@ -169,7 +185,9 @@
     <script src="/js/data.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/legal.js"></script>
-     <script src="/js/header.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/webapps.js"></script>
+
 </body>
 
 </html>

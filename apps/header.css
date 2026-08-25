@@ -1,0 +1,421 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background-color: var(--bg-base);
+  color: var(--text-main);
+
+  line-height: 1.6;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 1.5rem;
+}
+
+/* =========================================================
+   COMPACT NAVBAR
+========================================================= */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+
+  width: 100%;
+  height: 54px;
+
+  background: color-mix(in srgb, var(--bg-surface) 92%, transparent);
+
+  border-bottom: 1px solid var(--border-color);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-content {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  height: 54px;
+
+  gap: 20px;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 100%;
+
+  color: var(--text-main);
+
+  font-size: 15px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.035em;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: var(--transition);
+}
+
+.brand:hover {
+  color: var(--accent);
+}
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.nav-links {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 3px;
+
+  min-width: 0;
+}
+
+.nav-links > a {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 32px;
+
+  padding: 0 10px;
+
+  border-radius: 8px;
+
+  color: var(--text-muted);
+
+  font-size: 11px;
+  line-height: 1;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: var(--transition);
+}
+
+.nav-links > a:hover {
+  color: var(--text-main);
+
+  background: var(--bg-surface-hover);
+}
+
+.nav-links > a.active {
+  color: var(--accent);
+
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.nav-links > a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 3px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  transform: translateX(-50%);
+}
+
+/* =========================================================
+   APP SEARCH
+========================================================= */
+
+.nav-search-container {
+  position: relative;
+
+  width: 190px;
+
+  height: 32px;
+
+  flex: 0 1 190px;
+
+  margin-right: 3px;
+}
+
+.nav-search-container input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 10px 0 30px;
+
+  color: var(--text-main);
+
+  background: var(--bg-base);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 10.5px;
+  line-height: 1;
+
+  transition: var(--transition);
+}
+
+.nav-search-container input::placeholder {
+  color: var(--text-muted);
+}
+
+.nav-search-container input:hover {
+  background: var(--bg-surface-hover);
+}
+
+.nav-search-container input:focus {
+  background: var(--bg-surface);
+
+  border-color: var(--accent);
+
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.nav-search-icon {
+  position: absolute;
+
+  left: 9px;
+
+  top: 50%;
+
+  z-index: 2;
+
+  width: 14px;
+  height: 14px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-muted);
+
+  font-size: 17px;
+  line-height: 1;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+/* =========================================================
+   THEME BUTTON
+========================================================= */
+
+.theme-toggle {
+  width: 31px;
+  height: 31px;
+
+  flex: 0 0 31px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 3px;
+
+  padding: 0;
+
+  color: var(--text-muted);
+
+  background: var(--bg-base);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  line-height: 1;
+
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  color: var(--text-main);
+
+  background: var(--bg-surface-hover);
+
+  border-color: var(--accent);
+
+  transform: translateY(-1px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin-left: auto;
+
+  padding: 0;
+
+  color: var(--text-main);
+
+  background: var(--bg-surface);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.mobile-menu-button:hover {
+  color: var(--accent);
+
+  background: var(--bg-surface-hover);
+
+  border-color: var(--accent);
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 15px;
+  height: 1.5px;
+
+  background: currentColor;
+
+  border-radius: 999px;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* =========================================================
+   HAMBURGER → X
+========================================================= */
+
+.navbar.menu-open .mobile-menu-button span:nth-child(1) {
+  transform: translateY(5.5px) rotate(45deg);
+}
+
+.navbar.menu-open .mobile-menu-button span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.menu-open .mobile-menu-button span:nth-child(3) {
+  transform: translateY(-5.5px) rotate(-45deg);
+}
