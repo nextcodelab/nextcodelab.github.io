@@ -70,7 +70,7 @@
     } else {
       selectNote(notes[0].id);
     }
-    initMonacoEditor();
+   
   }
 
   // --- Theme Mode Logic ---
