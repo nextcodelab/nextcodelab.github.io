@@ -7,7 +7,7 @@
         links: [
             {
                 label: "Apps",
-                href: "/apps/"
+                href: "#apps"
             },
             {
                 label: "Services",
