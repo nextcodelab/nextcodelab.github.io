@@ -6,13 +6,19 @@ const webApps = [
     path: "/apps/pdf/",
   },
 
-      {
-          title: "Web Notes",
-          description: "Taking notes quickly",
-          icon: "/assets/apps/notes.svg",
-          path: "/apps/notes/"
-      },
-
+  {
+    title: "Web Notes",
+    description: "Taking notes quickly",
+    icon: "/assets/apps/notes.svg",
+    path: "/apps/notes/",
+  },
+  {
+    title: "Markdown Editor",
+    description:
+      "Fast, real-time Markdown editing and previewing right in your browser.",
+    icon: "/assets/apps/md.svg",
+    path: "/apps/md/",
+  },
   //     {
   //         title: "Word Counter",
   //         description: "Count words and characters",
