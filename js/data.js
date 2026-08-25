@@ -143,7 +143,9 @@ const appsData = [
       "Works on desktop and mobile browsers",
     ],
 
-    screenshots: [],
+    screenshots: [
+      "https://github.com/coderbasket/coderbasket.github.io/blob/environment/images/screenshot1.jpeg?raw=true"
+    ],
   },
 
   {

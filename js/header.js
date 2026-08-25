@@ -13,10 +13,7 @@
                 label: "Services",
                 href: "/services/"
             },
-            {
-                label: "Play",
-                href: "/play/"
-            },
+           
             {
                 label: "About",
                 href: "/about/"
