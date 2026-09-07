@@ -1,20 +1,20 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Transparent Background for seamless integration -->
-    <rect width="512" height="512" fill="transparent" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Dark Mode Canvas (GitHub Profile Ready) -->
+  <rect width="512" height="512" fill="#0D1117" />
+
+  <!-- Central Symbol Group -->
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Terminal Prompt Chevron ( Code / Input ) -->
+    <path d="M 124 160 L 220 256 L 124 352" stroke="#00F0FF" stroke-width="36" />
     
-    <!-- Top Left App Tile -->
-    <rect x="64" y="64" width="160" height="160" rx="48" fill="#2563eb" />
+    <!-- Code Separator Slash ( Lab / Experimentation ) -->
+    <path d="M 252 352 L 300 160" stroke="#3B82F6" stroke-width="32" />
     
-    <!-- Top Right App Tile -->
-    <rect x="288" y="64" width="160" height="160" rx="48" fill="#2563eb" />
-    
-    <!-- Bottom Left App Tile -->
-    <rect x="64" y="288" width="160" height="160" rx="48" fill="#2563eb" />
-    
-    <!-- Bottom Right "More/Other" Tile -->
-    <rect x="288" y="288" width="160" height="160" rx="44" fill="transparent" stroke="#2563eb" stroke-width="24" />
-    
-    <!-- The Plus Symbol indicating expansion/more -->
-    <line x1="368" y1="328" x2="368" y2="408" stroke="#2563eb" stroke-width="24" stroke-linecap="round" />
-    <line x1="328" y1="368" x2="408" y2="368" stroke="#2563eb" stroke-width="24" stroke-linecap="round" />
+    <!-- Forward Execution Chevron ( Next / Progress ) -->
+    <path d="M 316 160 L 412 256 L 316 352" stroke="#38BDF8" stroke-width="36" />
+  </g>
+
+  <!-- High-Contrast Accent Nodes -->
+  <circle cx="220" cy="256" r="10" fill="#00F0FF" />
+  <circle cx="412" cy="256" r="10" fill="#38BDF8" />
 </svg>
