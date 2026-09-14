@@ -1,5 +1,5 @@
 cd C:\Users\Robel\Documents\projects\nextcodelab
 
 git add .
-git commit -m "Update site navigation and legal page styling"
+git commit -m "Update"
 git push origin main

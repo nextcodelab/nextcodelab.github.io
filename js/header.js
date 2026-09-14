@@ -9,10 +9,10 @@
                 label: "Apps",
                 href: "/#apps"
             },
-            {
-                label: "Services",
-                href: "/services/"
-            },
+            // {
+            //     label: "Services",
+            //     href: "/services/"
+            // },
            
             {
                 label: "About",
