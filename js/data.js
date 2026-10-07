@@ -8,9 +8,10 @@ const appsData = [
       "Read and study the Bible offline with a fast, easy-to-use experience. Shepherd Bible lets you search Scripture, listen to Bible audio, highlight and bookmark verses, create personal notes and notebooks, explore cross-references, and use concordance tools with Hebrew and Greek support.",
     category: "Bible",
     icon: "https://store-images.s-microsoft.com/image/apps.24704.14323172057173048.f2d975bd-f26a-4749-b409-d6f4762f27b2.958f411e-da41-45f4-9f9d-5327b0ea614f?h=170",
-    platforms: ["Windows"],
+    platforms: ["Windows", "Android", "Web"],
     microsoftStore: "https://apps.microsoft.com/detail/9pprws532n91",
-    googlePlay: null,
+    googlePlay: "https://play.google.com/store/apps/details?id=com.nxtccode.biblenotebook",
+    website: "https://shepherdbible.github.io/",
     appStore: null,
     features: [
       "Offline Bible reading",
@@ -25,6 +26,14 @@ const appsData = [
     screenshots: [
       "https://store-images.s-microsoft.com/image/apps.12402.14323172057173048.a0945940-bf00-412a-898e-90c261c8b196.382e5db9-41c0-486e-bb97-6b3f90d7d47d",
       "https://store-images.s-microsoft.com/image/apps.28117.14323172057173048.a0945940-bf00-412a-898e-90c261c8b196.c2cdea1d-3c46-4278-a232-2f0ed609cf56",
+      "https://play-lh.googleusercontent.com/LK-c6T-u2pG6wd-2FipaTPDA1PLu_f1YCTK07neRSiscJ9kob31MV-_FDqUsAmEhelxtkD9J_2UkbVBiZVJCOg=w5120-h2880-rw",
+      "https://play-lh.googleusercontent.com/nYq3aEa5hEPMe5-qexYKqz9Ss0P8Yf_F1StygHiSI0NE94GOnwf-GyGaYYiXNHcK68kVcJzaMJ31XnJqBLWfHu0=w5120-h2880-rw",
+      "https://play-lh.googleusercontent.com/oJzuPSdssJZyoO3K12k_LNwost-4cSLKYGfNmGpJj6jNW-ygLEkf_Fq8fePPJt38c4NECUR6paqzFrH1KCnO=w5120-h2880-rw",
+      "https://play-lh.googleusercontent.com/EDkmle2nGwDrRFlIkFcAgG99cU1H4bizPoIK6iwEgPpyFcSFHSeazydQSDsGMOiQi4_gufSAmvi90Ku4AM0gWug=w5120-h2880-rw",
+      "https://play-lh.googleusercontent.com/G8V6WQ30tzLg7L7dCkwv3oE2rTI-U_nhegqLDjgv4xQmt6WtSTr0AN-qGQRgd8o0f7ZaB9mBTFGN86jy2edceA=w5120-h2880-rw",
+      "https://play-lh.googleusercontent.com/7RHzKlPX_1m2ZzDBRSPUGezXrfqR6Qj0gKgofpgqAlYHxSfLmkECrgMLq4qgOYIjKrorve2yMlrjNdu77dcAxz8=w5120-h2880-rw",
+      "https://play-lh.googleusercontent.com/Yc2xif2dZA68eTX_NF52Wew1_zStH8M1q13s8LrMb06-qFm4QOe0kIvQtUvsh6XWjg_fP0-0sHoaMOWpK8lJ_rs=w5120-h2880-rw",
+      "https://play-lh.googleusercontent.com/mD4wNvuTw4fgExnZgzH9VAuIaEkuo1T-1LQ_F3KJWcclccRatvEr4buTurMENYwfI5qk1QWibAsp43TwMRtxyw=w5120-h2880-rw"
     ],
   },
 
@@ -88,33 +97,33 @@ const appsData = [
     ],
   },
 
-  {
-    id: "word-puzzle-center",
-    name: "Word Puzzle Center",
-    category: "Utilities",
-    tagline: "Enjoy fun word puzzles anytime, right in your browser.",
-    description:
-      "Play a collection of fun and challenging word puzzle games directly in your web browser. No installation is required, and the games are designed to work comfortably on both desktop and mobile devices.",
+  // {
+  //   id: "word-puzzle-center",
+  //   name: "Word Puzzle Center",
+  //   category: "Utilities",
+  //   tagline: "Enjoy fun word puzzles anytime, right in your browser.",
+  //   description:
+  //     "Play a collection of fun and challenging word puzzle games directly in your web browser. No installation is required, and the games are designed to work comfortably on both desktop and mobile devices.",
 
-    icon: "https://wordpuzzlecenter-github-io.wordpuzzles.workers.dev/icons/icon-192.png",
+  //   icon: "https://wordpuzzlecenter-github-io.wordpuzzles.workers.dev/icons/icon-192.png",
 
-    platforms: ["Web"],
+  //   platforms: ["Web"],
 
-    microsoftStore: "",
-    googlePlay: "",
-    appStore: "",
+  //   microsoftStore: "",
+  //   googlePlay: "",
+  //   appStore: "",
 
-    website: "https://wordpuzzlecenter-github-io.wordpuzzles.workers.dev/",
+  //   website: "https://wordpuzzlecenter-github-io.wordpuzzles.workers.dev/",
 
-    features: [
-      "Play directly in your browser",
-      "Multiple word puzzle games",
-      "No installation required",
-      "Designed for desktop and mobile browsers",
-    ],
+  //   features: [
+  //     "Play directly in your browser",
+  //     "Multiple word puzzle games",
+  //     "No installation required",
+  //     "Designed for desktop and mobile browsers",
+  //   ],
 
-    screenshots: [],
-  },
+  //   screenshots: [],
+  // },
 
   {
     id: "coder-basket",
